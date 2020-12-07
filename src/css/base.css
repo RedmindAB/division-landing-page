@@ -1,0 +1,16 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  background: var(--background);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
