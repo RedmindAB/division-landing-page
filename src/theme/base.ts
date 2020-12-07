@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export type PropStylingConfig = { [key: string]: string | boolean }
 export type PropStylingProps = { [key: string]: boolean }
@@ -72,4 +72,12 @@ export const Spacer = styled.div<{
 
 export const TextContainer = styled.div<{ width: string }>`
   width: ${({ width }) => width};
+`
+
+export const hrefHover = css`
+  cursor: pointer;
+
+  &:hover {
+    color: var(--accent);
+  }
 `

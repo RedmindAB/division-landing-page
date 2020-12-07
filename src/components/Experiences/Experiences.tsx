@@ -24,7 +24,7 @@ const Experiences = () => {
 
   return (
     <>
-      <TitleSection title="experiences">
+      <TitleSection title="experiences" id="experiences">
         <Divider />
         <Spacer exact={140} />
       </TitleSection>

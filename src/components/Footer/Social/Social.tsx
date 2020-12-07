@@ -1,6 +1,6 @@
 import React from 'react'
 import { Spacer } from '../../../theme/base'
-import { Body2 } from '../../../theme/typography'
+import { Anchor, Body2 } from '../../../theme/typography'
 import * as S from './styled'
 
 type Props = {}
@@ -11,11 +11,23 @@ const Social = () => {
   return (
     <S.Container>
       <div>
-        <Body2>Instagram</Body2>
+        <Anchor
+          href="https://www.instagram.com/stureplansgruppen/"
+          target="_blank"
+        >
+          Instagram
+        </Anchor>
         <Spacer exact={10} />
-        <Body2>Facebook</Body2>
+        <Anchor
+          href="https://www.facebook.com/stureplansgruppen/"
+          target="_blank"
+        >
+          Facebook
+        </Anchor>
         <Spacer exact={10} />
-        <Body2>Twitter</Body2>
+        <Anchor href="https://twitter.com/stureplansgrupp" target="_blank">
+          Twitter
+        </Anchor>
       </div>
       <div>
         <Body2>Stureplansgruppen's policies</Body2>

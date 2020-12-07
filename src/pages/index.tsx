@@ -28,8 +28,6 @@ const IndexPage = () => {
       <PrimekeyTechDays />
       <Spacer exact={100} />
       <Footer />
-      <Spacer exact={100} />
-      <Spacer exact={100} />
     </main>
   )
 }

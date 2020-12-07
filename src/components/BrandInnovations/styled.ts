@@ -9,10 +9,15 @@ export const Footer = styled.div`
 `
 
 export const Background = styled.div`
-  z-index: -10;
   position: absolute;
-  width: 50%;
-  max-width: 700px;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
   top: 0;
   right: 0;
+  background: var(--accent);
+
+  & > * {
+    opacity: 0.15;
+  }
 `

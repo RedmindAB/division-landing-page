@@ -1,21 +1,35 @@
 import React from 'react'
 import * as S from './styled'
+import Img from 'gatsby-image'
 import TitleSection from '../__general/TitleSection'
 import { Spacer, TextContainer } from '../../theme/base'
-import { Body1, Headline1, Title1 } from '../../theme/typography'
+import { Body1, Headline1, Outlined, Title1 } from '../../theme/typography'
+import { graphql, useStaticQuery } from 'gatsby'
 
 type Props = {}
 
 const BrandPlatforms = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "Bg_2.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
   return (
-    <TitleSection title="brand platforms">
+    <TitleSection title="brand platforms" id="brand-platforms">
       <S.Container>
         <Title1 uppercase>
           We build
           <br />
           on-brand
           <br />
-          programs
+          <Outlined>programs</Outlined>
           <br />
           that
           <br />
@@ -29,7 +43,7 @@ const BrandPlatforms = () => {
         </Title1>
         <div>
           <Spacer exact={320} />
-          <TextContainer width="80%">
+          <TextContainer width="60%">
             <Headline1 uppercase>
               The old brand platforms, which say too much or too little, are not
               fit to grow multi-channel brand equity
@@ -52,6 +66,15 @@ const BrandPlatforms = () => {
           </TextContainer>
         </div>
       </S.Container>
+      <S.ImageContainer>
+        <Img
+          fluid={data.file.childImageSharp.fluid}
+          style={{ height: '100%', width: '100%' }}
+          imgStyle={{
+            backgroundSize: 'cover',
+          }}
+        />
+      </S.ImageContainer>
     </TitleSection>
   )
 }

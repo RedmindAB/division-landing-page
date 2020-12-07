@@ -11,7 +11,7 @@ type Props = {}
 const BrandInnovations = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "Bg_1.png" }) {
+      file(relativePath: { eq: "Bg_2.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -22,7 +22,7 @@ const BrandInnovations = () => {
   `)
 
   return (
-    <TitleSection title="brand innovations" background="var(--accent)">
+    <TitleSection title="brand innovations" id="brand-innovations">
       <TextContainer width="60%">
         <Title1 uppercase>
           We use brand dna coupled with emergent trends as a springobard to
@@ -42,7 +42,13 @@ const BrandInnovations = () => {
         </Body1>
       </S.Footer>
       <S.Background>
-        <Img fluid={data.file.childImageSharp.fluid} />
+        <Img
+          fluid={data.file.childImageSharp.fluid}
+          style={{ height: '100%', width: '100%' }}
+          imgStyle={{
+            backgroundSize: 'cover',
+          }}
+        />
       </S.Background>
     </TitleSection>
   )

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Spacer } from '../../../theme/base'
-import { Body2 } from '../../../theme/typography'
+import { Anchor, Body2 } from '../../../theme/typography'
 import { Row } from '../styled'
 import * as S from './styled'
 
@@ -10,11 +10,13 @@ const NavigationContact = () => {
   return (
     <Row>
       <div>
-        <S.PageLink>About</S.PageLink>
-        <S.PageLink>Brand platforms</S.PageLink>
-        <S.PageLink>Brand innovations</S.PageLink>
-        <S.PageLink>Partners</S.PageLink>
-        <S.PageLink>FAQ</S.PageLink>
+        <Anchor href="#about">About</Anchor>
+        <Spacer exact={10} />
+        <Anchor href="#experiences">Experiences</Anchor>
+        <Spacer exact={10} />
+        <Anchor href="#brand-platforms">Brand platforms</Anchor>
+        <Spacer exact={10} />
+        <Anchor href="#brand-innovations">Brand innovations</Anchor>
       </div>
       <div>
         <Spacer exact={100} />

@@ -73,18 +73,47 @@ export const Headline2 = styled.h2<TypographyProps>`
   ${typographyProps}
 `
 
-export const Body1 = styled.p<TypographyProps>`
-  ${typographyBase}
+const body1Styles = css`
   font-family: ${fonts.body.condensedLight};
   font-size: 2.4rem;
   line-height: 2.9rem;
+`
+
+export const Body1 = styled.p<TypographyProps>`
+  ${typographyBase}
+  ${body1Styles}
   ${typographyProps}
+`
+
+const body2Styles = css`
+  font-family: ${fonts.body.condensedLight};
+  font-size: 1.6rem;
+  line-height: 2rem;
 `
 
 export const Body2 = styled.p<TypographyProps>`
   ${typographyBase}
-  font-family: ${fonts.body.condensedLight};
-  font-size: 1.6rem;
-  line-height: 2rem;
+  ${body2Styles}
   ${typographyProps}
+`
+
+export const anchorStyles = css`
+  cursor: pointer;
+
+  &:hover {
+    color: var(--accent);
+  }
+`
+
+export const Anchor = styled.a<TypographyProps>`
+  ${typographyBase}
+  ${body2Styles}
+  ${typographyProps}
+  ${anchorStyles}
+`
+
+export const Outlined = styled.span`
+  color: var(--background);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
 `

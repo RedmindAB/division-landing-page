@@ -2,13 +2,12 @@ import React from 'react'
 import { TextContainer } from '../../theme/base'
 import { Body1, Title1 } from '../../theme/typography'
 import TitleSection from '../__general/TitleSection/TitleSection'
-import * as S from './styled'
 
 type Props = {}
 
 const About = () => {
   return (
-    <TitleSection title="about us">
+    <TitleSection title="about us" id="about">
       <TextContainer width="85%">
         <Title1 uppercase>
           By fusing creativity and technical innovation together, we leave
