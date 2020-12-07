@@ -25,7 +25,6 @@ const Experiences = () => {
   return (
     <>
       <TitleSection title="experiences">
-        <Spacer exact={160} />
         <Divider />
         <Spacer exact={140} />
       </TitleSection>
@@ -33,7 +32,6 @@ const Experiences = () => {
         title="stockholm design week"
         year="2019"
         pictures={[
-          data.file.childImageSharp.fluid,
           data.file.childImageSharp.fluid,
           data.file.childImageSharp.fluid,
           data.file.childImageSharp.fluid,

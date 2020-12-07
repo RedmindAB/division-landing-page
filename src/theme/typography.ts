@@ -35,9 +35,15 @@ export type TypographyComponent<T = {}> = FunctionComponent<TypographyProps & T>
 export const Title1 = styled.h1<TypographyProps>`
   ${typographyBase}
   font-family: ${fonts.title.condensedBold};
-  font-size: 11rem;
+
+  /* font-size: 11rem;
   letter-spacing: 0.4rem;
-  line-height: 9rem;
+  line-height: 9rem; */
+
+  font-size: 6vw;
+  letter-spacing: 0.1vw;
+  line-height: 5vw;
+
   ${typographyProps}
 `
 
