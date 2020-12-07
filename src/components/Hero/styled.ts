@@ -7,4 +7,15 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
+`
+
+export const ImageContainer = styled.div`
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: -10;
 `

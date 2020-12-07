@@ -4,11 +4,16 @@ import * as S from './styled'
 
 type Props = {
   title: string
+  withoutRightPadding?: boolean
 }
 
-const TitleSection: FunctionComponent<Props> = ({ title, children }) => {
+const TitleSection: FunctionComponent<Props> = ({
+  title,
+  children,
+  withoutRightPadding,
+}) => {
   return (
-    <S.Container>
+    <S.Container withoutRightPadding={withoutRightPadding}>
       <S.TitleContainer>
         <Body1 uppercase>{title}</Body1>
       </S.TitleContainer>
