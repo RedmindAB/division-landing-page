@@ -99,8 +99,8 @@ export const Body1 = styled.p<TypographyProps>`
 
 const body2Styles = css`
   font-family: ${fonts.body.condensedLight};
-  font-size: 1.6rem;
-  line-height: 2rem;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
 `
 
 export const Body2 = styled.p<TypographyProps>`
@@ -120,6 +120,9 @@ export const anchorStyles = css`
 export const Anchor = styled.a<TypographyProps>`
   ${typographyBase}
   ${body2Styles}
+  ${breakpoints.mobile} {
+    ${body1Styles}
+  }
   ${typographyProps}
   ${anchorStyles}
 `

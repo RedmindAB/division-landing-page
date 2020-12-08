@@ -11,7 +11,7 @@ export const Grid = styled.div`
 
   ${breakpoints.mobile} {
     grid-template-columns: 1fr;
-    grid-gap: 4rem;
+    grid-gap: 2rem;
   }
 `
 
@@ -21,6 +21,6 @@ export const Event = styled.div`
   padding: 2rem 0;
 
   ${breakpoints.mobile} {
-    grid-gap: 2rem;
+    grid-gap: 1rem;
   }
 `

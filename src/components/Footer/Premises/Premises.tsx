@@ -47,7 +47,7 @@ const list2 = premises.slice(halfwayIndexUp, premises.length - 1)
 const Premises = () => {
   const renderPremise = ({ name, website }) => (
     <S.Link key={name} uppercase>
-      <a href={website} target="_blank">
+      <a href={website} target="_blank" rel="noopener">
         {name}
       </a>
     </S.Link>

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { hrefHover } from '../../../theme/base'
-import { Body2 } from '../../../theme/typography'
+import { anchorStyles, Body2 } from '../../../theme/typography'
 
 export const Container = styled.div``
 
@@ -17,6 +17,8 @@ export const Underlined = styled.span`
 `
 
 export const Mail = styled.a`
+  ${anchorStyles}
+
   &:hover span {
     text-decoration: underline !important;
   }

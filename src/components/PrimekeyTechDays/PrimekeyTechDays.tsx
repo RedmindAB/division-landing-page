@@ -4,6 +4,8 @@ import * as S from './styled'
 type Props = {}
 
 const PrimekeyTechDays = () => {
+  return null
+  
   return (
     <S.Container>
       PrimekeyTechDays

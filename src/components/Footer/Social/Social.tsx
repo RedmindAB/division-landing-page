@@ -14,6 +14,7 @@ const Social = () => {
         <Anchor
           href="https://www.instagram.com/stureplansgruppen/"
           target="_blank"
+          rel="noopener"
         >
           Instagram
         </Anchor>
@@ -21,11 +22,16 @@ const Social = () => {
         <Anchor
           href="https://www.facebook.com/stureplansgruppen/"
           target="_blank"
+          rel="noopener"
         >
           Facebook
         </Anchor>
         <Spacer exact={10} />
-        <Anchor href="https://twitter.com/stureplansgrupp" target="_blank">
+        <Anchor
+          href="https://twitter.com/stureplansgrupp"
+          target="_blank"
+          rel="noopener"
+        >
           Twitter
         </Anchor>
       </div>
@@ -33,7 +39,7 @@ const Social = () => {
         <Body2>Stureplansgruppen's policies</Body2>
       </div>
       <div>
-        <Body2 style={{ opacity: 0.3 }}>@{year} DIVISION.</Body2>
+        <Body2 style={{ opacity: 0.6 }}>@{year} DIVISION.</Body2>
       </div>
     </S.Container>
   )

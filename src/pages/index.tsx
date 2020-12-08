@@ -20,6 +20,7 @@ const IndexPage = () => {
         <meta charSet="utf-8" />
         <title>DIVISION.</title>
         <meta name="description" content="Description for division website" />
+        <html lang="en" />
       </Helmet>
       <main>
         <Hero />

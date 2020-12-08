@@ -24,7 +24,7 @@ const Location = () => {
       <div>
         <Body2>+46 8 791 40 10</Body2>
         <Body2>
-          <Mail>
+          <Mail href="mailto:contact@spgevent.se">
             <Underlined>contact@spgevent.s</Underlined>
             <span>e</span>
           </Mail>

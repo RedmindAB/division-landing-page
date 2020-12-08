@@ -1,3 +1,4 @@
+import { Link } from 'gatsby'
 import React from 'react'
 import { Spacer } from '../../../theme/base'
 import { Anchor, Body2 } from '../../../theme/typography'
@@ -9,15 +10,23 @@ type Props = {}
 const NavigationContact = () => {
   return (
     <Row>
-      <div>
-        <Anchor href="#about">About</Anchor>
+      <nav>
+        <Link to="#about">
+          <Anchor as={Body2}>About us</Anchor>
+        </Link>
         <Spacer exact={10} />
-        <Anchor href="#experiences">Experiences</Anchor>
+        <Link to="#experiences">
+          <Anchor as={Body2}>Experiences</Anchor>
+        </Link>
         <Spacer exact={10} />
-        <Anchor href="#brand-platforms">Brand platforms</Anchor>
+        <Link to="#brand-platforms">
+          <Anchor as={Body2}>Brand platforms</Anchor>
+        </Link>
         <Spacer exact={10} />
-        <Anchor href="#brand-innovations">Brand innovations</Anchor>
-      </div>
+        <Link to="#brand-innovations">
+          <Anchor as={Body2}>Brand innovations</Anchor>
+        </Link>
+      </nav>
       <div>
         <Spacer exact={100} mobile={40} />
         <Body2>
