@@ -19,3 +19,11 @@ export const ImageContainer = styled.div`
   position: absolute;
   z-index: -10;
 `
+
+export const LogoContainer = styled.div`
+  max-width: 100%;
+
+  svg {
+    max-width: 100%;
+  }
+`

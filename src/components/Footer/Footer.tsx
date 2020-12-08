@@ -25,7 +25,7 @@ const Footer = () => {
       <Spacer exact={50} />
       <Spacer exact={20} />
       <Social />
-      <Spacer exact={50} />
+      <Spacer exact={50} mobile={20} />
     </S.Container>
   )
 }

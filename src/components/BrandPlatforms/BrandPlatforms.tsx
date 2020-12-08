@@ -5,10 +5,15 @@ import TitleSection from '../__general/TitleSection'
 import { Spacer, TextContainer } from '../../theme/base'
 import { Body1, Headline1, Outlined, Title1 } from '../../theme/typography'
 import { graphql, useStaticQuery } from 'gatsby'
+import { mediaQueries } from '../../theme/mediaBreakpoints'
+import { useMediaQuery } from 'react-responsive'
 
 type Props = {}
 
 const BrandPlatforms = () => {
+  const isMobile = useMediaQuery({
+    query: mediaQueries.mobile,
+  })
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "Bg_2.png" }) {
@@ -21,29 +26,31 @@ const BrandPlatforms = () => {
     }
   `)
 
+  const br = isMobile ? ' ' : <br />
+
   return (
     <TitleSection title="brand platforms" id="brand-platforms">
       <S.Container>
         <Title1 uppercase>
           We build
-          <br />
+          {br}
           on-brand
-          <br />
+          {br}
           <Outlined>programs</Outlined>
-          <br />
+          {br}
           that
-          <br />
+          {br}
           transform
-          <br />
+          {br}
           your brand
-          <br />
-          into a<br />
+          {br}
+          into a{br}
           platform
-          <br />
+          {br}
         </Title1>
         <div>
-          <Spacer exact={320} />
-          <TextContainer width="60%">
+          <Spacer exact={320} mobile={1} />
+          <TextContainer width="60%" mobile="100%">
             <Headline1 uppercase>
               The old brand platforms, which say too much or too little, are not
               fit to grow multi-channel brand equity

@@ -9,26 +9,42 @@ import UpcomingEvents from '../components/UpcomingEvents'
 import PrimekeyTechDays from '../components/PrimekeyTechDays'
 import Footer from '../components/Footer'
 import { Spacer } from '../theme/base'
+import Zoom from 'react-reveal/Zoom'
+import Slide from 'react-reveal/Slide'
+import Helmet from 'react-helmet'
 
 const IndexPage = () => {
   return (
-    <main>
-      <Hero />
-      <Spacer exact={100} />
-      <About />
-      <Spacer exact={100} />
-      <Experiences />
-      <Spacer exact={100} />
-      <BrandPlatforms />
-      <Spacer exact={100} />
-      <BrandInnovations />
-      <Spacer exact={100} />
-      <UpcomingEvents />
-      <Spacer exact={100} />
-      <PrimekeyTechDays />
-      <Spacer exact={100} />
-      <Footer />
-    </main>
+    <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>DIVISION.</title>
+        <meta name="description" content="Description for division website" />
+      </Helmet>
+      <main>
+        <Hero />
+        <Spacer exact={100} mobile={40} />
+        <Zoom>
+          <About />
+        </Zoom>
+        <Spacer exact={100} mobile={40} />
+        <Experiences />
+        <Spacer exact={100} mobile={40} />
+        <Slide left>
+          <BrandPlatforms />
+        </Slide>
+        <Spacer exact={100} mobile={40} />
+        <Slide right>
+          <BrandInnovations />
+        </Slide>
+        <Spacer exact={100} mobile={40} />
+        <UpcomingEvents />
+        <Spacer exact={100} mobile={40} />
+        <PrimekeyTechDays />
+        <Spacer exact={100} mobile={40} />
+        <Footer />
+      </main>
+    </>
   )
 }
 

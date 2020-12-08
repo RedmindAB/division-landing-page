@@ -22,34 +22,40 @@ const BrandInnovations = () => {
   `)
 
   return (
-    <TitleSection title="brand innovations" id="brand-innovations">
-      <TextContainer width="60%">
-        <Title1 uppercase>
-          We use brand dna coupled with emergent trends as a springobard to
-          build on-brand creation
-        </Title1>
-      </TextContainer>
-      <Spacer exact={60} />
-      <S.Footer>
-        <Headline1 uppercase>
-          Develop ideas, solve problems, and make cool new stuff happen.
-        </Headline1>
-        <Body1>
-          This is where the division's community of developers, designers and
-          idea generators can hang out, share ideas and help brands in creating
-          new products, extending experiences with new rituals/services, and
-          building ecosystems.
-        </Body1>
-      </S.Footer>
-      <S.Background>
-        <Img
-          fluid={data.file.childImageSharp.fluid}
-          style={{ height: '100%', width: '100%' }}
-          imgStyle={{
-            backgroundSize: 'cover',
-          }}
-        />
-      </S.Background>
+    <TitleSection
+      title="brand innovations"
+      id="brand-innovations"
+      style={{ padding: '6rem 3rem' }}
+    >
+      <div className="title-section-content">
+        <TextContainer width="60%" mobile="100%">
+          <Title1 uppercase>
+            We use brand dna coupled with emergent trends as a springobard to
+            build on-brand creation
+          </Title1>
+        </TextContainer>
+        <Spacer exact={60} mobile={30} />
+        <S.Footer>
+          <Headline1 uppercase>
+            Develop ideas, solve problems, and make cool new stuff happen.
+          </Headline1>
+          <Body1>
+            This is where the division's community of developers, designers and
+            idea generators can hang out, share ideas and help brands in
+            creating new products, extending experiences with new
+            rituals/services, and building ecosystems.
+          </Body1>
+        </S.Footer>
+        <S.Background>
+          <Img
+            fluid={data.file.childImageSharp.fluid}
+            style={{ height: '100%', width: '100%' }}
+            imgStyle={{
+              backgroundSize: 'cover',
+            }}
+          />
+        </S.Background>
+      </div>
     </TitleSection>
   )
 }

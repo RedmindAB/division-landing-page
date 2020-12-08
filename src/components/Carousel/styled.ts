@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { breakpoints } from '../../theme/mediaBreakpoints'
 import { Headline2 } from '../../theme/typography'
 
 export const overlayStyles = css`
@@ -11,6 +12,10 @@ export const Container = styled.div`
   height: 900px;
   margin: 2rem 0;
   position: relative;
+
+  ${breakpoints.mobile} {
+    height: 80vh;
+  }
 `
 
 export const TitleContainer = styled.div`

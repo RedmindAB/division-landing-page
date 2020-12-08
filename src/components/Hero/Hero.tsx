@@ -30,7 +30,9 @@ const Hero = () => {
           alt="hero-image"
         />
       </S.ImageContainer>
-      <LogoLarge />
+      <S.LogoContainer>
+        <LogoLarge />
+      </S.LogoContainer>
       <div>
         <Title2 uppercase style={{ color: 'var(--accent)' }}>
           brand platforms

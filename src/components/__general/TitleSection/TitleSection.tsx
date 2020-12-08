@@ -24,7 +24,7 @@ const TitleSection: FunctionComponent<Props> = ({
       <S.TitleContainer>
         <Body1 uppercase>{title}</Body1>
       </S.TitleContainer>
-      <div>{children}</div>
+      {children}
     </S.Container>
   )
 }

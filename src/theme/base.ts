@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { breakpoints } from './mediaBreakpoints'
 
 export type PropStylingConfig = { [key: string]: string | boolean }
 export type PropStylingProps = { [key: string]: boolean }
@@ -65,13 +66,31 @@ export const Spacer = styled.div<{
   w40?: boolean
   w44?: boolean
   w48?: boolean
+  mobile?: number
 }>`
   height: ${getSpacing('h') as any}px;
   width: ${getSpacing('w') as any}px;
+
+  ${({ mobile }) =>
+    mobile &&
+    `
+    ${breakpoints.mobile} {
+      height: ${getSpacing('h')({ exact: mobile }) as any}px;
+    }
+  `}
 `
 
-export const TextContainer = styled.div<{ width: string }>`
+export const TextContainer = styled.div<{ width: string; mobile?: string }>`
   width: ${({ width }) => width};
+  max-width: 90vw;
+
+  ${({ mobile }) =>
+    mobile &&
+    `
+    ${breakpoints.mobile} {
+      width: ${mobile};
+    }
+  `}
 `
 
 export const hrefHover = css`
@@ -79,5 +98,13 @@ export const hrefHover = css`
 
   &:hover {
     color: var(--accent);
+  }
+`
+
+export const ShowMobile = styled.span`
+  display: none;
+
+  ${breakpoints.mobile} {
+    display: initial;
   }
 `

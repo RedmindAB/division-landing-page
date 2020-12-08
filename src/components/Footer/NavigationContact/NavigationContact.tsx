@@ -19,7 +19,7 @@ const NavigationContact = () => {
         <Anchor href="#brand-innovations">Brand innovations</Anchor>
       </div>
       <div>
-        <Spacer exact={100} />
+        <Spacer exact={100} mobile={40} />
         <Body2>
           For press inquires contact
           <br />

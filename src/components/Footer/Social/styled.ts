@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { breakpoints } from '../../../theme/mediaBreakpoints'
 
 export const Container = styled.div`
   display: grid;
@@ -11,5 +12,18 @@ export const Container = styled.div`
 
   & > div:first-child {
     justify-self: flex-start;
+  }
+
+  ${breakpoints.mobile} {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4rem;
+
+    & > div:first-child {
+      grid-column: 1 / -1;
+    }
+
+    & > div {
+      justify-self: initial;
+    }
   }
 `

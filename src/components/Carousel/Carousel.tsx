@@ -37,7 +37,7 @@ const Carousel: FunctionComponent<Props> = ({ pictures, title, year }) => {
 
   const renderPicture = (image: any, index: number) => {
     return (
-      <S.PictureContainer>
+      <S.PictureContainer key={index}>
         <Img
           style={{ height: '100%', width: '100%' }}
           imgStyle={{ backgroundSize: 'cover' }}

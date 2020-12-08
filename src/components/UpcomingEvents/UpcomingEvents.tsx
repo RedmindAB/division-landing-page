@@ -2,7 +2,7 @@ import React from 'react'
 import * as S from './styled'
 import Divider from '../__general/Divider'
 import { Spacer } from '../../theme/base'
-import { Body1, Body2, Headline2 } from '../../theme/typography'
+import { Body1, Body2 } from '../../theme/typography'
 
 type Props = {}
 
@@ -33,14 +33,14 @@ const events: Event[] = [
 const UpcomingEvents = () => {
   const renderEvent = ({ title, location, date }: Event) => {
     return (
-      <>
+      <div key={title}>
         <S.Event key={title}>
           <Body2>{title}</Body2>
           <Body2>{location}</Body2>
           <Body2>{date}</Body2>
         </S.Event>
         <Divider />
-      </>
+      </div>
     )
   }
 

@@ -21,7 +21,13 @@ const PageDots: FunctionComponent<Props> = ({ current, amount }) => {
         .map((_, index) => {
           const active = current >= index + 1
 
-          return <S.Dot active={active} containerWidth={containerWidth} />
+          return (
+            <S.Dot
+              key={index}
+              active={active}
+              containerWidth={containerWidth}
+            />
+          )
         })}
     </S.Container>
   )

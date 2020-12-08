@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { breakpoints } from '../../../theme/mediaBreakpoints'
 
 export const Container = styled.section<{
   withoutRightPadding?: boolean
@@ -13,6 +14,16 @@ export const Container = styled.section<{
   align-items: flex-start;
   padding: 3rem;
   ${({ background }) => background && `background: ${background}`}
+
+  ${breakpoints.mobile} {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+
+    & .title-section-content {
+      grid-template-columns: 1fr;
+      grid-gap: 2rem;
+    }
+  }
 `
 
 export const TitleContainer = styled.div`

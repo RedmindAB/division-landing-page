@@ -1,6 +1,7 @@
 import { FunctionComponent } from 'react'
 import styled, { css } from 'styled-components'
 import fonts from './fonts'
+import { breakpoints } from './mediaBreakpoints'
 
 export type ThemeColorProps = {
   primary?: boolean | string
@@ -44,6 +45,12 @@ export const Title1 = styled.h1<TypographyProps>`
   letter-spacing: 0.1vw;
   line-height: 5vw;
 
+  ${breakpoints.mobile} {
+    font-size: 4.5rem;
+    letter-spacing: 0;
+    line-height: 4.5rem;
+  }
+
   ${typographyProps}
 `
 
@@ -53,6 +60,11 @@ export const Title2 = styled.h2<TypographyProps>`
   font-size: 6rem;
   letter-spacing: -0.3rem;
   line-height: 6rem;
+  ${breakpoints.mobile} {
+    font-size: 4rem;
+    letter-spacing: 0rem;
+    line-height: 4rem;
+  }
   ${typographyProps}
 `
 
