@@ -12,10 +12,13 @@ import { Spacer } from '../theme/base'
 import Zoom from 'react-reveal/Zoom'
 import Slide from 'react-reveal/Slide'
 import Helmet from 'react-helmet'
+import Header from '../components/Header/Header'
+import ParticleBackground from '../components/ParticleBackground'
 
 const IndexPage = () => {
   return (
     <>
+      <Header />
       <Helmet>
         <meta charSet="utf-8" />
         <title>DIVISION.</title>
@@ -25,23 +28,15 @@ const IndexPage = () => {
       <main>
         <Hero />
         <Spacer exact={100} mobile={40} />
-        <Zoom>
-          <About />
-        </Zoom>
+        <About />
         <Spacer exact={100} mobile={40} />
         <Experiences />
-        <Spacer exact={100} mobile={40} />
-        <Slide left>
-          <BrandPlatforms />
-        </Slide>
-        <Spacer exact={100} mobile={40} />
-        <Slide right>
-          <BrandInnovations />
-        </Slide>
-        <Spacer exact={100} mobile={40} />
-        <UpcomingEvents />
-        <Spacer exact={100} mobile={40} />
-        <PrimekeyTechDays />
+        <BrandPlatforms />
+        <BrandInnovations />
+        {/* <Spacer exact={100} mobile={40} /> */}
+        {/* <UpcomingEvents /> */}
+        {/* <Spacer exact={100} mobile={40} /> */}
+        {/* <PrimekeyTechDays /> */}
         <Spacer exact={100} mobile={40} />
         <Footer />
       </main>

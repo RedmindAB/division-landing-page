@@ -21,6 +21,7 @@ export type TypographyProps = {
   fontSize?: number
   as?: any
   bold?: boolean
+  clickable?: boolean
 } & ThemeColorProps
 
 const typographyBase = css`
@@ -28,7 +29,8 @@ const typographyBase = css`
 `
 
 const typographyProps = css<TypographyProps>`
-  ${({ uppercase }) => uppercase && 'text-transform: uppercase'}
+  ${({ uppercase }) => uppercase && 'text-transform: uppercase;'}
+  ${({ clickable }) => clickable && 'cursor: pointer;'}
 `
 
 export type TypographyComponent<T = {}> = FunctionComponent<TypographyProps & T>
