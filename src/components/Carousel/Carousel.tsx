@@ -1,21 +1,34 @@
 import React, { FunctionComponent, useEffect, useState } from 'react'
-import { Headline2 } from '../../theme/typography'
+import { Headline2, Outlined, Title1 } from '../../theme/typography'
 import Img from 'gatsby-image'
 import PageDots from '../PageDots'
 import * as S from './styled'
+import { Link } from 'gatsby'
 
-type Props = {
-  pictures: any[]
+type NavLink = {
+  slug: string
   title: string
-  year: string
 }
 
-const Carousel: FunctionComponent<Props> = ({ pictures, title, year }) => {
+type Slide = {
+  picture: string
+  title: string
+  year: string
+  link?: NavLink
+}
+
+type Props = {
+  slides: Slide[]
+  title?: string
+  year?: string
+}
+
+const Carousel: FunctionComponent<Props> = ({ slides, title, year }) => {
   const [activeIndex, setActiveIndex] = useState(0)
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      if (activeIndex + 1 === pictures.length) {
+      if (activeIndex + 1 === slides.length) {
         return setActiveIndex(0)
       }
       setActiveIndex(activeIndex + 1)
@@ -23,17 +36,6 @@ const Carousel: FunctionComponent<Props> = ({ pictures, title, year }) => {
 
     return () => clearTimeout(timeout)
   }, [activeIndex])
-
-  let indexStr = activeIndex + 1 + ''
-  let maxIndexStr = pictures.length + ''
-
-  if (indexStr.length < 2) {
-    indexStr = `0${indexStr}`
-  }
-
-  if (maxIndexStr.length < 2) {
-    maxIndexStr = `0${maxIndexStr}`
-  }
 
   const renderPicture = (image: any, index: number) => {
     return (
@@ -49,21 +51,48 @@ const Carousel: FunctionComponent<Props> = ({ pictures, title, year }) => {
     )
   }
 
+  const currentSlide = slides[activeIndex]
+  const hasLinks = slides.some((slide) => slide.link)
+  const links = hasLinks && slides.filter((s) => s.link).map((s) => s.link)
+  let indexStr = activeIndex + 1 + ''
+  let maxIndexStr = slides.length + ''
+
+  if (indexStr.length < 2) {
+    indexStr = `0${indexStr}`
+  }
+
+  if (maxIndexStr.length < 2) {
+    maxIndexStr = `0${maxIndexStr}`
+  }
+
+  const renderLink = ({ slug, title }: NavLink) => {
+    return (
+      <Link to={slug} key={slug}>
+        <Title1 uppercase>
+          <Outlined>{title}</Outlined>
+        </Title1>
+      </Link>
+    )
+  }
+
   return (
     <S.Container>
       <S.TitleContainer>
-        <Headline2 uppercase>{title}</Headline2>
-        <S.Year>{year}</S.Year>
+        <Headline2 uppercase>{title || currentSlide.title}</Headline2>
+        <S.Year>{year || currentSlide.year}</S.Year>
         <S.SlideNumber>
           {indexStr} / {maxIndexStr}
         </S.SlideNumber>
       </S.TitleContainer>
       <S.BottomContainer>
-        <PageDots current={activeIndex + 1} amount={pictures.length} />
+        <PageDots current={activeIndex + 1} amount={slides.length} />
       </S.BottomContainer>
       <S.PicturesContainer offset={activeIndex}>
-        {pictures.map(renderPicture)}
+        {slides.map((slide, index) => renderPicture(slide.picture, index))}
       </S.PicturesContainer>
+      {hasLinks && (
+        <S.NavigationContainer>{links.map(renderLink)}</S.NavigationContainer>
+      )}
     </S.Container>
   )
 }

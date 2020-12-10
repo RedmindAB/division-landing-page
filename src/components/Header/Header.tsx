@@ -64,7 +64,7 @@ const Header = () => {
             Lab
           </Body2>
         </Link>
-        <Link to="/showcase">
+        <Link to="/showcase/test">
           <Body2 uppercase clickable style={{ color: 'var(--accent)' }}>
             Showcase
           </Body2>

@@ -19,6 +19,7 @@ export type TypographyProps = {
   underline?: boolean | string
   color?: string
   fontSize?: number
+  accent?: boolean
   as?: any
   bold?: boolean
   clickable?: boolean
@@ -31,6 +32,7 @@ const typographyBase = css`
 const typographyProps = css<TypographyProps>`
   ${({ uppercase }) => uppercase && 'text-transform: uppercase;'}
   ${({ clickable }) => clickable && 'cursor: pointer;'}
+  ${({ accent }) => accent && 'color: var(--accent);'}
 `
 
 export type TypographyComponent<T = {}> = FunctionComponent<TypographyProps & T>
@@ -130,7 +132,7 @@ export const Anchor = styled.a<TypographyProps>`
 `
 
 export const Outlined = styled.span`
-  color: var(--background);
+  color: transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
 `

@@ -59,3 +59,10 @@ export const PictureContainer = styled.div`
   width: 100vw;
   background: #444;
 `
+
+export const NavigationContainer = styled.nav`
+  position: absolute;
+  right: 13rem;
+  top: 50%;
+  transform: translateY(-50%);
+`

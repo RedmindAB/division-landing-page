@@ -29,12 +29,26 @@ const Experiences = () => {
         <Spacer exact={140} />
       </TitleSection>
       <Carousel
-        title="stockholm design week"
-        year="2019"
-        pictures={[
-          data.file.childImageSharp.fluid,
-          data.file.childImageSharp.fluid,
-          data.file.childImageSharp.fluid,
+        slides={[
+          {
+            picture: data.file.childImageSharp.fluid,
+            year: '2019',
+            title: 'Stockholm design week',
+            link: {
+              slug: '/showcase/stockholm-open',
+              title: 'Stockholm open',
+            },
+          },
+          {
+            picture: data.file.childImageSharp.fluid,
+            year: '2020',
+            title: 'Some other event',
+          },
+          {
+            picture: data.file.childImageSharp.fluid,
+            year: '1739',
+            title: 'Another event entirely',
+          },
         ]}
       />
     </>
