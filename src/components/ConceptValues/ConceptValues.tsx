@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { Fragment, useContext } from 'react'
 import { Project, ProjectValue } from '../../data/projects'
 import { ShowcaseContext } from '../../pages/showcase/[project]'
 import { Body1, Title1, Title2 } from '../../theme/typography'
@@ -11,10 +11,10 @@ const ConceptValues = () => {
 
   const renderValue = (value: ProjectValue) => {
     return (
-      <>
+      <Fragment key={value.title}>
         <Title2>{value.title}</Title2>
         <Body1>{value.body}</Body1>
-      </>
+      </Fragment>
     )
   }
 

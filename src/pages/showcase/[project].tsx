@@ -10,6 +10,7 @@ import ShowcaseHero from '../../components/ShowcaseHero'
 import ConceptValues from '../../components/ConceptValues'
 import ConceptAbout from '../../components/ConceptAbout'
 import ConceptDescription from '../../components/ConceptDescription'
+import PicturesGrid from '../../components/PicturesGrid'
 import ConceptPlatform from '../../components/ConceptPlatform'
 import { Project, projects } from '../../data/projects'
 import Divider from '../../components/__general/Divider'
@@ -56,6 +57,7 @@ const Showcase: FunctionComponent<Props> = ({ params: { project } }) => {
       <Spacer exact={100} mobile={40} />
       <ConceptPlatform />
       <ConceptValues />
+      {/* <PicturesGrid pictures={[selectedProject.platformImage]} /> */}
       <Footer />
     </ShowcaseContext.Provider>
   )

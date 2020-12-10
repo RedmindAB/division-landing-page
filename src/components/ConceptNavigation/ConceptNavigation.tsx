@@ -14,7 +14,7 @@ const ConceptNavigation: FunctionComponent<Props> = ({}) => {
     const isSelected = project.slug === selectedProject.slug
 
     return (
-      <Link to={`/showcase/${project.slug}`}>
+      <Link to={`/showcase/${project.slug}`} key={project.slug}>
         <Body1 uppercase key={project.slug} accent={isSelected}>
           {project.conceptName}
         </Body1>
