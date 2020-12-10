@@ -1,12 +1,17 @@
-import React, { FunctionComponent } from 'react'
-import * as S from './styled'
+import React, { FunctionComponent, useContext } from 'react'
+import { ShowcaseContext } from '../../pages/showcase/[project]'
 import ConceptNavigation from '../ConceptNavigation'
+import Video from '../Video/Video'
+import * as S from './styled'
 
 type Props = {}
 
 const ShowcaseHero: FunctionComponent<Props> = () => {
+  const { selectedProject } = useContext(ShowcaseContext)
+
   return (
     <S.Container>
+      <Video src={selectedProject.video} />
       <S.NavigationContainer>
         <ConceptNavigation />
       </S.NavigationContainer>

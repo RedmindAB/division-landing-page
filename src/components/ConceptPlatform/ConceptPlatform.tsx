@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { ShowcaseContext } from '../../pages/showcase/[project]'
-import { Body1, Headline2, Title2 } from '../../theme/typography'
+import { Body1, Title2 } from '../../theme/typography'
 import * as S from './styled'
 
 type Props = {}
@@ -22,6 +22,12 @@ const ConceptPlatform = () => {
       <S.PlatformsContainer>
         {selectedProject.keywords.map(renderKeywords)}
       </S.PlatformsContainer>
+      <S.Background>
+        <img
+          src={selectedProject.platformImage}
+          style={{ height: '100%', width: '100%', backgroundSize: 'cover' }}
+        />
+      </S.Background>
     </S.Container>
   )
 }

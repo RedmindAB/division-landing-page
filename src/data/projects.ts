@@ -12,11 +12,15 @@ export type Project = {
   values: ProjectValue[]
   date: string
   slug: string
+  video: string
+  platformImage: any
 }
 
 export const projects: Project[] = [
   {
     conceptName: 'Stockholm Open',
+    video: require('../assets/videos/Hero_1.mp4'),
+    platformImage: require('../assets/images/Hero.png'),
     slug: 'stockholm-open',
     date: '2020-05-06',
     conceptDescription:
@@ -63,6 +67,8 @@ export const projects: Project[] = [
   },
   {
     conceptName: 'Food Festival',
+    video: require('../assets/videos/Hero_1.mp4'),
+    platformImage: require('../assets/images/Hero.png'),
     slug: 'food-festival',
     date: '2020-05-06',
     conceptDescription:
@@ -109,6 +115,8 @@ export const projects: Project[] = [
   },
   {
     conceptName: 'Some Event',
+    video: require('../assets/videos/Hero_1.mp4'),
+    platformImage: require('../assets/images/Hero.png'),
     slug: 'some-event',
     date: '2020-05-06',
     conceptDescription:
@@ -154,7 +162,9 @@ export const projects: Project[] = [
     ],
   },
   {
-    conceptName: 'Stockholm Open',
+    conceptName: 'Stockholm Closed',
+    video: require('../assets/videos/Hero_1.mp4'),
+    platformImage: require('../assets/images/Hero.png'),
     slug: 'stockholm-closed',
     date: '2020-05-06',
     conceptDescription:
@@ -200,7 +210,9 @@ export const projects: Project[] = [
     ],
   },
   {
-    conceptName: 'Stockholm Open',
+    conceptName: 'Test Event',
+    video: require('../assets/videos/Hero_1.mp4'),
+    platformImage: require('../assets/images/Hero.png'),
     slug: 'test-event',
     date: '2020-05-06',
     conceptDescription:
@@ -247,6 +259,8 @@ export const projects: Project[] = [
   },
   {
     conceptName: 'My Man!',
+    video: require('../assets/videos/Hero_1.mp4'),
+    platformImage: require('../assets/images/Hero.png'),
     slug: 'my-man',
     date: '2020-05-06',
     conceptDescription:

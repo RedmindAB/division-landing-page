@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { breakpoints } from '../../theme/mediaBreakpoints'
 
 export const Container = styled.nav`
   display: grid;
@@ -7,4 +8,9 @@ export const Container = styled.nav`
   grid-column-gap: 10rem;
   width: fit-content;
   margin: 0 auto;
+
+  ${breakpoints.mobile} {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+  }
 `

@@ -17,7 +17,7 @@ const ConceptAbout = () => {
           <Title1 uppercase>{selectedProject.heading}</Title1>
         </TextContainer>
         <Spacer exact={40} />
-        <TextContainer width="40%">
+        <TextContainer width="40%" mobile="100%">
           <Body1>{selectedProject.body}</Body1>
         </TextContainer>
       </div>

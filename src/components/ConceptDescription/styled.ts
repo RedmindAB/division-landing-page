@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { breakpoints } from '../../theme/mediaBreakpoints'
 
 export const Container = styled.section`
   display: grid;
@@ -6,4 +7,9 @@ export const Container = styled.section`
   padding: 3rem;
   padding-left: calc(3rem + 226px);
   grid-gap: 6rem;
+
+  ${breakpoints.mobile} {
+    grid-template-columns: 1fr;
+    padding-left: 3rem;
+  }
 `
