@@ -4,16 +4,15 @@ import React, {
   useEffect,
   useState,
 } from 'react'
+import ConceptAbout from '../../components/ConceptAbout'
+import ConceptDescription from '../../components/ConceptDescription'
+import ConceptPlatform from '../../components/ConceptPlatform'
+import ConceptValues from '../../components/ConceptValues'
 import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 import ShowcaseHero from '../../components/ShowcaseHero'
-import ConceptValues from '../../components/ConceptValues'
-import ConceptAbout from '../../components/ConceptAbout'
-import ConceptDescription from '../../components/ConceptDescription'
-import PicturesGrid from '../../components/PicturesGrid'
-import ConceptPlatform from '../../components/ConceptPlatform'
-import { Project, projects } from '../../data/projects'
 import Divider from '../../components/__general/Divider'
+import { Project, projects } from '../../data/projects'
 import { Spacer } from '../../theme/base'
 
 type Props = {

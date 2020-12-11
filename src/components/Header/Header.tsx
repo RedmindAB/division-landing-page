@@ -1,14 +1,14 @@
 import useScrollPosition from '@react-hook/window-scroll'
 import { Link } from 'gatsby'
 import React, { useState } from 'react'
-import LogoSmall from '../../assets/svg/LogoSmall'
-import Hamburger from '../../assets/svg/Hamburger'
-import { projects } from '../../data/projects'
-import { Body1, Body2, Headline2 } from '../../theme/typography'
-import * as S from './styled'
 import { useMediaQuery } from 'react-responsive'
-import Drawer from 'rc-drawer'
+import Hamburger from '../../assets/svg/Hamburger'
+import LogoSmall from '../../assets/svg/LogoSmall'
+import { projects } from '../../data/projects'
 import { mediaQueries } from '../../theme/mediaBreakpoints'
+import { Body2, Headline2 } from '../../theme/typography'
+import * as S from './styled'
+
 type Props = {}
 
 const Header = () => {

@@ -8,23 +8,50 @@ import * as S from './styled'
 type Props = {}
 
 const NavigationContact = () => {
+  const getOnPressFn = (id: string) => () => {
+    const scrollToElement = () => {
+      const element = document.querySelector(id)
+
+      if (element) {
+        document.querySelector(id).scrollIntoView({ behavior: 'smooth' })
+        return true
+      }
+
+      return false
+    }
+
+    const isSuccessful = scrollToElement()
+
+    if (!isSuccessful) {
+      setTimeout(scrollToElement, 50)
+    }
+  }
+
   return (
     <Row>
       <nav>
-        <Link to="#about">
-          <Anchor as={Body2}>About us</Anchor>
+        <Link to="/">
+          <Anchor as={Body2} onClick={getOnPressFn('#about')}>
+            About us
+          </Anchor>
         </Link>
         <Spacer exact={10} />
-        <Link to="#experiences">
-          <Anchor as={Body2}>Experiences</Anchor>
+        <Link to="/">
+          <Anchor as={Body2} onClick={getOnPressFn('#experiences')}>
+            Experiences
+          </Anchor>
         </Link>
         <Spacer exact={10} />
-        <Link to="#brand-platforms">
-          <Anchor as={Body2}>Brand platforms</Anchor>
+        <Link to="/">
+          <Anchor as={Body2} onClick={getOnPressFn('#brand-platforms')}>
+            Brand platforms
+          </Anchor>
         </Link>
         <Spacer exact={10} />
-        <Link to="#brand-innovations">
-          <Anchor as={Body2}>Brand innovations</Anchor>
+        <Link to="/">
+          <Anchor as={Body2} onClick={getOnPressFn('#brand-innovations')}>
+            Brand innovations
+          </Anchor>
         </Link>
       </nav>
       <div>
