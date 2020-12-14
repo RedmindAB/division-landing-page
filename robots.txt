@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://needstobetheproductionurl.com/sitemap.xml
-Host: https://needstobetheproductionurl.com
+Sitemap: https://redmindab.github.io/sitemap.xml
+Host: https://redmindab.github.io
