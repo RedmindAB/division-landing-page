@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://needstobetheproductionurl.com/sitemap.xml
+Host: https://needstobetheproductionurl.com
