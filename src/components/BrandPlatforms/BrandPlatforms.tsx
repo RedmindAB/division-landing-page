@@ -33,51 +33,47 @@ const BrandPlatforms = () => {
   return (
     <div style={{ position: 'relative' }}>
       <Spacer exact={100} mobile={40} />
-      <ParticleBackground />
-      <TitleSection title="brand platforms" id="brand-platforms">
+      {/* <ParticleBackground /> */}
+      <TitleSection title="what we do" id="brand-platforms">
         <Slide up>
           <S.Container>
+            <S.TopTextContainer>
+              <Title1 uppercase>
+                By fusing creativity{br} and technical{br}innovation{br}
+              </Title1>
+            </S.TopTextContainer>
             <Title1 uppercase>
-              We build
-              {br}
-              on-brand
-              {br}
-              <Outlined>programs</Outlined>
-              {br}
-              that
-              {br}
-              transform
-              {br}
-              your brand
-              {br}
-              into a{br}
-              platform
-              {br}
+              together,{br}
+              we{' '}
+              <Outlined>
+                leave{br}'ordinary'{br} behind
+              </Outlined>
+              and{br}create{br}on-brand{br}innovation{br}programs.
             </Title1>
-            <div>
-              <Spacer exact={320} mobile={1} />
-              <TextContainer width="60%" mobile="100%">
+            <S.BodyContainer>
+              <Spacer exact={100} mobile={1} />
+              <TextContainer width="100%" mobile="100%">
                 <Headline1 uppercase>
-                  The old brand platforms, which say too much or too little, are
-                  not fit to grow multi-channel brand equity
+                  We share your challenges and ambitions, we understand what you
+                  need
                   <br />
                   <br />
                 </Headline1>
                 <Body1>
                   We reconcile the sharpness of strategy, the richness of
                   legacy, purpose, and pedigree.
-                  <br />
-                  <br />
-                  Brands are to innovate, stakeholders need more robust tools.
-                  <br />
-                  <br />
+                  <br /> <br />
+                  For Brands to innovate, stakeholders need more robust tools.
                   Biometrics, artificial intelligence, the internet of things
-                  (IoT), facial recognition, new technology-fueled era. Working
-                  with your brand we create new products, extending experiences
-                  with new rituals/services, and building platform ecosystems.
+                  (IoT), facial recognition, and machine learning are elements
+                  of this new technology-fueled era.
+                  <br /> <br />
+                  Working with your Brand we create new products, extending
+                  experiences with new rituals/services, and building platforms
+                  ecosystems
                 </Body1>
               </TextContainer>
-            </div>
+            </S.BodyContainer>
           </S.Container>
           {/* <S.ImageContainer>
           <Img

@@ -5,82 +5,39 @@ import Particles from 'react-tsparticles'
 type Props = {}
 
 const options = {
-  background: {
-    color: {
-      value: '#070707',
-    },
-  },
-  fpsLimit: 60,
-  interactivity: {
-    detectsOn: 'canvas',
-    events: {
-      onClick: {
-        enable: true,
-        mode: 'push',
-      },
-      onHover: {
-        enable: true,
-        mode: 'repulse',
-      },
-      resize: true,
-    },
-    modes: {
-      bubble: {
-        distance: 400,
-        duration: 2,
-        opacity: 0.8,
-        size: 40,
-      },
-      push: {
-        quantity: 4,
-      },
-      repulse: {
-        distance: 200,
-        duration: 0.4,
-      },
-    },
-  },
   particles: {
-    color: {
-      value: '#ffffff',
-    },
-    // links: {
-    //   color: '#ffffff',
-    //   distance: 150,
-    //   enable: true,
-    //   opacity: 0.2,
-    //   width: 1,
-    // },
-    collisions: {
-      enable: true,
-    },
-    move: {
-      direction: 'random',
-      enable: true,
-      outMode: 'bounce',
-      random: false,
-      speed: 3,
-      straight: false,
-    },
-    number: {
-      density: {
-        enable: true,
-        value_area: 800,
-      },
-      value: 40,
-    },
+    number: { value: 80, density: { enable: false, value_area: 800 } },
+    color: { value: '#ff4e15' },
+
     opacity: {
-      value: 0.4,
-    },
-    shape: {
-      type: 'circle',
+      value: 0.48,
+      random: true,
+      anim: { enable: true, speed: 1, opacity_min: 0, sync: false },
     },
     size: {
+      value: 3,
       random: true,
-      value: 5,
+      anim: { enable: false, speed: 4, size_min: 0.3, sync: false },
+    },
+    line_linked: {
+      enable: false,
+      distance: 150,
+      color: '#ffffff',
+      opacity: 0.4,
+      width: 1,
+    },
+    move: {
+      enable: true,
+      speed: 1,
+      direction: 'none',
+      random: true,
+      straight: false,
+      out_mode: 'out',
+      bounce: false,
+      attract: { enable: false, rotateX: 600, rotateY: 600 },
     },
   },
-  detectRetina: true,
+  retina_detect: false,
 }
 
 const ParticleBackground = () => {
@@ -96,6 +53,24 @@ const ParticleBackground = () => {
       console.log('particle height: ', height)
       setHeight(element.clientHeight)
     }
+
+    document.addEventListener('mousemove', ({ clientX, clientY }) => {
+      const offsetX = clientX / window.innerWidth // 0 -> 1
+      const offsetY = clientY / window.innerHeight // 0 -> 1
+      const skewModifier = 0.5
+
+      // document.getElementById('tsparticles').style.transform = `translate(-${
+      //   offsetX * 50
+      // }px, -${offsetY * 50}px)`
+
+      const skew = `skew(${offsetX * skewModifier}deg, ${
+        offsetY * skewModifier
+      }deg) translate(-${offsetX * 20}px, -${offsetY * 20}px)`
+
+      document
+        .querySelectorAll('h6')
+        .forEach((el) => (el.style.transform = skew))
+    })
   }, [])
 
   return (

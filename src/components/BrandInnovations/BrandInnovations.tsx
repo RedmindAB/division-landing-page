@@ -6,6 +6,7 @@ import { Body1, Headline1, Headline2, Title1 } from '../../theme/typography'
 import TitleSection from '../__general/TitleSection/TitleSection'
 import * as S from './styled'
 import Slide from 'react-reveal/Slide'
+import Fade from 'react-reveal/Fade'
 
 type Props = {}
 
@@ -24,11 +25,11 @@ const BrandInnovations = () => {
 
   return (
     <TitleSection
-      title="brand innovations"
+      title="how we innovate"
       id="brand-innovations"
       style={{ padding: '6rem 3rem' }}
     >
-      <Slide left>
+      <Slide up>
         <div className="title-section-content">
           <TextContainer width="60%" mobile="100%">
             <Title1 uppercase>

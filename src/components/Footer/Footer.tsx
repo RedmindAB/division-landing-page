@@ -12,7 +12,6 @@ type Props = {}
 const Footer = () => {
   return (
     <S.Container>
-      <Spacer exact={20} />
       <NavigationContact />
       <Spacer exact={50} />
       <Divider />
@@ -25,7 +24,6 @@ const Footer = () => {
       <Spacer exact={50} />
       <Spacer exact={20} />
       <Social />
-      <Spacer exact={50} mobile={20} />
     </S.Container>
   )
 }

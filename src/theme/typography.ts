@@ -37,7 +37,7 @@ const typographyProps = css<TypographyProps>`
 
 export type TypographyComponent<T = {}> = FunctionComponent<TypographyProps & T>
 
-export const Title1 = styled.h1<TypographyProps>`
+export const Title1 = styled.h6<TypographyProps>`
   ${typographyBase}
   font-family: ${fonts.title.condensedBold};
 
@@ -53,6 +53,12 @@ export const Title1 = styled.h1<TypographyProps>`
     font-size: 4.5rem;
     letter-spacing: 0;
     line-height: 4.5rem;
+  }
+
+  ${breakpoints.ultrawide} {
+    font-size: 4vw;
+    letter-spacing: 0;
+    line-height: 3.5vw;
   }
 
   ${typographyProps}

@@ -11,6 +11,30 @@ import * as S from './styled'
 
 type Props = {}
 
+type Route = {
+  title: string
+  id: string
+}
+
+const homePageRoutes: Route[] = [
+  {
+    title: 'Home',
+    id: '#hero',
+  },
+  {
+    title: 'About us',
+    id: '#about',
+  },
+  {
+    title: 'What we do',
+    id: '#brand-platforms',
+  },
+  {
+    title: 'How we innovate',
+    id: '#brand-innovations',
+  },
+]
+
 const Header = () => {
   const [showDrawer, setShowDrawer] = useState(false)
   const isMobile = useMediaQuery({
@@ -45,43 +69,13 @@ const Header = () => {
       {isMobile && showDrawer && (
         <S.DrawerMenu>
           <span onClick={toggleDrawer}>
-            <Link to="/">
-              <Headline2 uppercase clickable onClick={getOnPressFn('#hero')}>
-                Home
-              </Headline2>
-            </Link>
-            <Link to="/">
-              <Headline2 uppercase clickable onClick={getOnPressFn('#about')}>
-                What
-              </Headline2>
-            </Link>
-            <Link to="/">
-              <Headline2
-                uppercase
-                clickable
-                onClick={getOnPressFn('#experiences')}
-              >
-                How
-              </Headline2>
-            </Link>
-            <Link to="/">
-              <Headline2
-                uppercase
-                clickable
-                onClick={getOnPressFn('#brand-platforms')}
-              >
-                Work
-              </Headline2>
-            </Link>
-            <Link to="/">
-              <Headline2
-                uppercase
-                clickable
-                onClick={getOnPressFn('#brand-innovations')}
-              >
-                Lab
-              </Headline2>
-            </Link>
+            {homePageRoutes.map((route) => (
+              <Link to="/">
+                <Headline2 uppercase clickable onClick={getOnPressFn(route.id)}>
+                  {route.title}
+                </Headline2>
+              </Link>
+            ))}
             <Link to={`showcase/${projects[0].slug}`}>
               <Headline2 uppercase clickable style={{ color: 'var(--accent)' }}>
                 Showcase
@@ -104,43 +98,13 @@ const Header = () => {
         {!isMobile && (
           <S.NavContainer>
             <>
-              <Link to="/">
-                <Body2 uppercase clickable onClick={getOnPressFn('#hero')}>
-                  Home
-                </Body2>
-              </Link>
-              <Link to="/">
-                <Body2 uppercase clickable onClick={getOnPressFn('#about')}>
-                  What
-                </Body2>
-              </Link>
-              <Link to="/">
-                <Body2
-                  uppercase
-                  clickable
-                  onClick={getOnPressFn('#experiences')}
-                >
-                  How
-                </Body2>
-              </Link>
-              <Link to="/">
-                <Body2
-                  uppercase
-                  clickable
-                  onClick={getOnPressFn('#brand-platforms')}
-                >
-                  Work
-                </Body2>
-              </Link>
-              <Link to="/">
-                <Body2
-                  uppercase
-                  clickable
-                  onClick={getOnPressFn('#brand-innovations')}
-                >
-                  Lab
-                </Body2>
-              </Link>
+              {homePageRoutes.map((route) => (
+                <Link to="/">
+                  <Body2 uppercase clickable onClick={getOnPressFn(route.id)}>
+                    {route.title}
+                  </Body2>
+                </Link>
+              ))}
               <Link to={`showcase/${projects[0].slug}`}>
                 <Body2 uppercase clickable style={{ color: 'var(--accent)' }}>
                   Showcase

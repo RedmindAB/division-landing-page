@@ -108,3 +108,5 @@ export const ShowMobile = styled.span`
     display: initial;
   }
 `
+
+export const SectionContainer = styled.di

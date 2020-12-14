@@ -6,6 +6,7 @@ import * as S from './styled'
 import { Headline1 } from '../../theme/typography'
 import Carousel from '../Carousel'
 import { graphql, useStaticQuery } from 'gatsby'
+import ParticleBackground from '../ParticleBackground'
 
 type Props = {}
 
@@ -23,8 +24,9 @@ const Experiences = () => {
   `)
 
   return (
-    <>
-      <TitleSection title="experiences" id="experiences">
+    <div style={{ position: 'relative' }}>
+      {/* <ParticleBackground /> */}
+      <TitleSection title="brands" id="experiences">
         <Divider />
         <Spacer exact={140} />
       </TitleSection>
@@ -43,6 +45,10 @@ const Experiences = () => {
             picture: data.file.childImageSharp.fluid,
             year: '2020',
             title: 'Some other event',
+            link: {
+              slug: '/showcase/stockholm-closed',
+              title: 'Stockholm closed',
+            },
           },
           {
             picture: data.file.childImageSharp.fluid,
@@ -51,7 +57,7 @@ const Experiences = () => {
           },
         ]}
       />
-    </>
+    </div>
   )
 }
 

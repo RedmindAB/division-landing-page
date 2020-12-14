@@ -9,6 +9,7 @@ import Footer from '../components/Footer'
 import { Spacer } from '../theme/base'
 import Helmet from 'react-helmet'
 import Header from '../components/Header/Header'
+import ParticleBackground from '../components/ParticleBackground'
 
 const IndexPage = () => {
   return (
@@ -16,15 +17,25 @@ const IndexPage = () => {
       <Header />
       <Helmet>
         <meta charSet="utf-8" />
-        <title>DIVISION.</title>
+        <title>DIVISION</title>
         <meta name="description" content="Description for division website" />
         <html lang="en" />
       </Helmet>
-      <main>
+      <main style={{ position: 'relative' }}>
+        <div
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            zIndex: -100,
+          }}
+        >
+          <ParticleBackground />
+        </div>
         <Hero />
-        <Spacer exact={100} mobile={40} />
         <About />
-        <Spacer exact={100} mobile={40} />
         <Experiences />
         <BrandPlatforms />
         <BrandInnovations />

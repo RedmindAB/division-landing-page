@@ -55,7 +55,6 @@ const NavigationContact = () => {
         </Link>
       </nav>
       <div>
-        <Spacer exact={100} mobile={40} />
         <Body2>
           For press inquires contact
           <br />

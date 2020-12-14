@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import { breakpoints } from '../../theme/mediaBreakpoints'
-import { Headline2 } from '../../theme/typography'
+import { Headline2, Title1 } from '../../theme/typography'
 
 export const overlayStyles = css`
   z-index: 10;
@@ -65,4 +65,40 @@ export const NavigationContainer = styled.nav`
   right: 13rem;
   top: 50%;
   transform: translateY(-50%);
+  display: grid;
+  grid-gap: 3rem;
+
+  & * {
+    text-align: right;
+  }
+
+  ${breakpoints.mobile} {
+    right: 3rem;
+  }
+`
+
+export const NavigationItem = styled(Title1)`
+  transition: transform 0.23s;
+  transform-origin: center right;
+
+  &:hover {
+    transform: scale(1.07);
+  }
+
+  &:hover * {
+    color: var(--foreground);
+  }
+
+  ${breakpoints.mobile} {
+    &:hover {
+      transform: none;
+    }
+  }
+`
+
+export const PlusContainer = styled.span`
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-6rem + -100%));
 `

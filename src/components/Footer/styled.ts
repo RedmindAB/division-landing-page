@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { breakpoints } from '../../theme/mediaBreakpoints'
-import { Body2 } from '../../theme/typography'
 
 export const Container = styled.div`
   padding: 3rem 3rem 3rem 24rem;

@@ -1,9 +1,10 @@
-import React, { FunctionComponent, useEffect, useState } from 'react'
-import { Headline2, Outlined, Title1 } from '../../theme/typography'
+import { Link } from 'gatsby'
 import Img from 'gatsby-image'
+import React, { FunctionComponent, useEffect, useState } from 'react'
+import Plus from '../../assets/svg/Plus'
+import { Headline2, Outlined } from '../../theme/typography'
 import PageDots from '../PageDots'
 import * as S from './styled'
-import { Link } from 'gatsby'
 
 type NavLink = {
   slug: string
@@ -68,9 +69,9 @@ const Carousel: FunctionComponent<Props> = ({ slides, title, year }) => {
   const renderLink = ({ slug, title }: NavLink) => {
     return (
       <Link to={slug} key={slug}>
-        <Title1 uppercase>
+        <S.NavigationItem uppercase>
           <Outlined>{title}</Outlined>
-        </Title1>
+        </S.NavigationItem>
       </Link>
     )
   }
@@ -91,7 +92,12 @@ const Carousel: FunctionComponent<Props> = ({ slides, title, year }) => {
         {slides.map((slide, index) => renderPicture(slide.picture, index))}
       </S.PicturesContainer>
       {hasLinks && (
-        <S.NavigationContainer>{links.map(renderLink)}</S.NavigationContainer>
+        <S.NavigationContainer>
+          <S.PlusContainer className="hide-mobile">
+            <Plus />
+          </S.PlusContainer>
+          {links.map(renderLink)}
+        </S.NavigationContainer>
       )}
     </S.Container>
   )
