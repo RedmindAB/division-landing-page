@@ -1,4 +1,8 @@
 module.exports = {
+  pathPrefix: '/division-landing-page',
+  siteMetadata: {
+    siteUrl: 'https://redmindab.github.io/division-landing-page',
+  },
   plugins: [
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
@@ -6,6 +10,7 @@ module.exports = {
     'gatsby-plugin-advanced-sitemap',
     // https://www.gatsbyjs.com/plugins/gatsby-plugin-robots-txt/?=robot
     'gatsby-plugin-robots-txt',
+    'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-source-filesystem',
       options: {

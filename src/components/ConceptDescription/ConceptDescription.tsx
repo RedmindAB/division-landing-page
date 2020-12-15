@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
-import { ShowcaseContext } from '../../pages/showcase/[project]'
 import { Body1, Body2, Headline1 } from '../../theme/typography'
 import * as S from './styled'
 import moment from 'moment'
 import Divider from '../__general/Divider'
 import { Spacer } from '../../theme/base'
 import fonts from '../../theme/fonts'
+import { ShowcaseContext } from '../../templates/showcase'
 
 type Props = {}
 

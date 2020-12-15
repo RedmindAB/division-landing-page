@@ -27,3 +27,14 @@ export const LogoContainer = styled.div`
     max-width: 100%;
   }
 `
+
+export const VideoThumbnail = styled.img`
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+`

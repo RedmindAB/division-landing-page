@@ -76,7 +76,7 @@ const Header = () => {
                 </Headline2>
               </Link>
             ))}
-            <Link to={`showcase/${projects[0].slug}`}>
+            <Link to={`/showcase/${projects[0].slug}`}>
               <Headline2 uppercase clickable style={{ color: 'var(--accent)' }}>
                 Showcase
               </Headline2>
@@ -105,7 +105,7 @@ const Header = () => {
                   </Body2>
                 </Link>
               ))}
-              <Link to={`showcase/${projects[0].slug}`}>
+              <Link to={`/showcase/${projects[0].slug}`}>
                 <Body2 uppercase clickable style={{ color: 'var(--accent)' }}>
                   Showcase
                 </Body2>

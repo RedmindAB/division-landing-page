@@ -1,6 +1,6 @@
 import React, { Fragment, useContext } from 'react'
 import { Project, ProjectValue } from '../../data/projects'
-import { ShowcaseContext } from '../../pages/showcase/[project]'
+import { ShowcaseContext } from '../../templates/showcase'
 import { Body1, Title1, Title2 } from '../../theme/typography'
 import * as S from './styled'
 

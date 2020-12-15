@@ -1,9 +1,9 @@
 import React, { FunctionComponent, useContext } from 'react'
 import { Project } from '../../data/projects'
 import * as S from './styled'
-import { ShowcaseContext } from '../../pages/showcase/[project]'
 import { Body1 } from '../../theme/typography'
 import { Link } from 'gatsby'
+import { ShowcaseContext } from '../../templates/showcase'
 
 type Props = {}
 

@@ -7,7 +7,7 @@ import BrandPlatforms from '../components/BrandPlatforms'
 import BrandInnovations from '../components/BrandInnovations'
 import Footer from '../components/Footer'
 import { Spacer } from '../theme/base'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import Header from '../components/Header/Header'
 import ParticleBackground from '../components/ParticleBackground'
 

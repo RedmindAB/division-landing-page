@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useContext } from 'react'
-import { ShowcaseContext } from '../../pages/showcase/[project]'
+import { ShowcaseContext } from '../../templates/showcase'
 import ConceptNavigation from '../ConceptNavigation'
 import Video from '../Video/Video'
 import * as S from './styled'

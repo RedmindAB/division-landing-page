@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { ShowcaseContext } from '../../pages/showcase/[project]'
+import { ShowcaseContext } from '../../templates/showcase'
 import { Body1, Title2 } from '../../theme/typography'
 import * as S from './styled'
 
