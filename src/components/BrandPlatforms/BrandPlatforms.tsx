@@ -60,17 +60,10 @@ const BrandPlatforms = () => {
                   <br />
                 </Headline1>
                 <Body1>
-                  We reconcile the sharpness of strategy, the richness of
-                  legacy, purpose, and pedigree.
-                  <br /> <br />
                   For Brands to innovate, stakeholders need more robust tools.
                   Biometrics, artificial intelligence, the internet of things
                   (IoT), facial recognition, and machine learning are elements
                   of this new technology-fueled era.
-                  <br /> <br />
-                  Working with your Brand we create new products, extending
-                  experiences with new rituals/services, and building platforms
-                  ecosystems
                 </Body1>
               </TextContainer>
             </S.BodyContainer>

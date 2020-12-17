@@ -16,6 +16,7 @@ import { Project, projects } from '../data/projects'
 import { Spacer } from '../theme/base'
 import '../css/index.css'
 import { Helmet } from 'react-helmet'
+import FullScreenReveal from '../components/FullScreenReveal'
 
 type Props = {
   pageContext: {
@@ -56,17 +57,33 @@ const Showcase: FunctionComponent<Props> = ({ pageContext: { project } }) => {
       </Helmet>
       <Header />
       <ShowcaseHero />
-      <Spacer exact={30} />
-      <ConceptDescription />
-      <div style={{ padding: '3rem' }}>
-        <Divider />
+      <div style={{ background: 'var(--background)' }}>
+        <Spacer exact={30} />
+        <ConceptDescription />
+        <div style={{ padding: '3rem' }}>
+          <Divider />
+        </div>
+        <ConceptAbout />
+        <Spacer exact={100} mobile={40} />
+        <ConceptPlatform />
+        <ConceptValues />
+        {/* <PicturesGrid pictures={[selectedProject.platformImage]} /> */}
+        <Footer />
       </div>
-      <ConceptAbout />
-      <Spacer exact={100} mobile={40} />
-      <ConceptPlatform />
-      <ConceptValues />
-      {/* <PicturesGrid pictures={[selectedProject.platformImage]} /> */}
-      <Footer />
+      <FullScreenReveal>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          style={{ height: '100%', width: '100%', objectFit: 'cover' }}
+        >
+          <source
+            src={require('../assets/videos/Footer.mp4')}
+            type="video/mp4"
+          />
+        </video>
+      </FullScreenReveal>
     </ShowcaseContext.Provider>
   )
 }

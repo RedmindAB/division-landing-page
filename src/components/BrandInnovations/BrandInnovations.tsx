@@ -2,7 +2,13 @@ import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 import Img from 'gatsby-image'
 import { Spacer, TextContainer } from '../../theme/base'
-import { Body1, Headline1, Headline2, Title1 } from '../../theme/typography'
+import {
+  Body1,
+  Headline1,
+  Headline2,
+  Outlined,
+  Title1,
+} from '../../theme/typography'
 import TitleSection from '../__general/TitleSection/TitleSection'
 import * as S from './styled'
 import Slide from 'react-reveal/Slide'
@@ -33,8 +39,8 @@ const BrandInnovations = () => {
         <div className="title-section-content">
           <TextContainer width="60%" mobile="100%">
             <Title1 uppercase>
-              We use brand dna coupled with emergent trends as a springobard to
-              build on-brand creation
+              We use brand dna coupled with emergent trends as a springobard to{' '}
+              <Outlined>build on-brand creation</Outlined>
             </Title1>
           </TextContainer>
           <Spacer exact={60} mobile={30} />
@@ -43,9 +49,9 @@ const BrandInnovations = () => {
               Develop ideas, solve problems, and make cool new stuff happen.
             </Headline1>
             <Body1>
-              This is where the division's community of developers, designers
-              and idea generators can hang out, share ideas and help brands in
-              creating new products, extending experiences with new
+              BRAND INNOVATIONS is where the division's community of developers,
+              designers, and idea generators can hang out, share ideas and help
+              brands in creating new products, extending experiences with new
               rituals/services, and building ecosystems.
             </Body1>
           </S.Footer>

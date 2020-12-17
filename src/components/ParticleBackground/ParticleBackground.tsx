@@ -67,9 +67,9 @@ const ParticleBackground = () => {
         offsetY * skewModifier
       }deg) translate(-${offsetX * 20}px, -${offsetY * 20}px)`
 
-      document
-        .querySelectorAll('h6')
-        .forEach((el) => (el.style.transform = skew))
+      // document
+      //   .querySelectorAll('h6')
+      //   .forEach((el) => (el.style.transform = skew))
     })
   }, [])
 

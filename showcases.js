@@ -48,10 +48,10 @@ module.exports = [
     ],
   },
   {
-    conceptName: 'Food Festival',
+    conceptName: 'Impact Week',
     video: require.resolve('./src/assets/videos/Hero_1.mp4'),
     platformImage: require.resolve('./src/assets/images/Hero.png'),
-    slug: 'food-festival',
+    slug: 'impact-week',
     date: '2020-05-06',
     conceptDescription:
       'High level description of the project and dont make it too long',
@@ -96,10 +96,10 @@ module.exports = [
     ],
   },
   {
-    conceptName: 'Some Event',
+    conceptName: 'Childhood',
     video: require.resolve('./src/assets/videos/Hero_1.mp4'),
     platformImage: require.resolve('./src/assets/images/Hero.png'),
-    slug: 'some-event',
+    slug: 'childhood',
     date: '2020-05-06',
     conceptDescription:
       'High level description of the project and dont make it too long',
@@ -144,10 +144,10 @@ module.exports = [
     ],
   },
   {
-    conceptName: 'Stockholm Closed',
+    conceptName: 'Division',
     video: require.resolve('./src/assets/videos/Hero_1.mp4'),
     platformImage: require.resolve('./src/assets/images/Hero.png'),
-    slug: 'stockholm-closed',
+    slug: 'division',
     date: '2020-05-06',
     conceptDescription:
       'High level description of the project and dont make it too long',
@@ -192,10 +192,10 @@ module.exports = [
     ],
   },
   {
-    conceptName: 'Test Event',
+    conceptName: 'Swedish Olympic Commitee',
     video: require.resolve('./src/assets/videos/Hero_1.mp4'),
     platformImage: require.resolve('./src/assets/images/Hero.png'),
-    slug: 'test-event',
+    slug: 'swedish-olympic-commitee',
     date: '2020-05-06',
     conceptDescription:
       'High level description of the project and dont make it too long',
@@ -240,10 +240,10 @@ module.exports = [
     ],
   },
   {
-    conceptName: 'My Man!',
+    conceptName: 'Foodstock',
     video: require.resolve('./src/assets/videos/Hero_1.mp4'),
     platformImage: require.resolve('./src/assets/images/Hero.png'),
-    slug: 'my-man',
+    slug: 'foodstock',
     date: '2020-05-06',
     conceptDescription:
       'High level description of the project and dont make it too long',

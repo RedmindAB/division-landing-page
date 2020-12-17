@@ -9,4 +9,7 @@ export default {
   body: {
     condensedLight: 'Supria Sans Condensed Light',
   },
+  condensedBold: 'Supria Sans Condensed Bold',
+  condensedLight: 'Supria Sans Condensed Light',
+  light: 'Supria Sans light',
 }

@@ -66,10 +66,10 @@ export const projects: Project[] = [
     ],
   },
   {
-    conceptName: 'Food Festival',
+    conceptName: 'Impact Week',
     video: require('../assets/videos/Hero_1.mp4'),
     platformImage: require('../assets/images/Hero.png'),
-    slug: 'food-festival',
+    slug: 'impact-week',
     date: '2020-05-06',
     conceptDescription:
       'High level description of the project and dont make it too long',
@@ -114,10 +114,10 @@ export const projects: Project[] = [
     ],
   },
   {
-    conceptName: 'Some Event',
+    conceptName: 'Childhood',
     video: require('../assets/videos/Hero_1.mp4'),
     platformImage: require('../assets/images/Hero.png'),
-    slug: 'some-event',
+    slug: 'childhood',
     date: '2020-05-06',
     conceptDescription:
       'High level description of the project and dont make it too long',
@@ -162,10 +162,10 @@ export const projects: Project[] = [
     ],
   },
   {
-    conceptName: 'Stockholm Closed',
+    conceptName: 'Division',
     video: require('../assets/videos/Hero_1.mp4'),
     platformImage: require('../assets/images/Hero.png'),
-    slug: 'stockholm-closed',
+    slug: 'division',
     date: '2020-05-06',
     conceptDescription:
       'High level description of the project and dont make it too long',
@@ -210,10 +210,10 @@ export const projects: Project[] = [
     ],
   },
   {
-    conceptName: 'Test Event',
+    conceptName: 'Swedish Olympic Committe',
     video: require('../assets/videos/Hero_1.mp4'),
     platformImage: require('../assets/images/Hero.png'),
-    slug: 'test-event',
+    slug: 'swedish-olympic-commitee',
     date: '2020-05-06',
     conceptDescription:
       'High level description of the project and dont make it too long',
@@ -258,10 +258,10 @@ export const projects: Project[] = [
     ],
   },
   {
-    conceptName: 'My Man!',
+    conceptName: 'Foodstock',
     video: require('../assets/videos/Hero_1.mp4'),
     platformImage: require('../assets/images/Hero.png'),
-    slug: 'my-man',
+    slug: 'foodstock',
     date: '2020-05-06',
     conceptDescription:
       'High level description of the project and dont make it too long',

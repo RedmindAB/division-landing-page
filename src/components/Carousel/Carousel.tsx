@@ -41,10 +41,11 @@ const Carousel: FunctionComponent<Props> = ({ slides, title, year }) => {
   const renderPicture = (image: any, index: number) => {
     return (
       <S.PictureContainer key={index}>
-        <Img
-          style={{ height: '100%', width: '100%' }}
-          imgStyle={{ backgroundSize: 'cover' }}
-          fluid={image}
+        <img
+          style={{ height: '100%', width: '100%', backgroundSize: 'cover' }}
+          // imgStyle={{ backgroundSize: 'cover' }}
+          src={image}
+          // fluid={image}
           alt={`slideshow-image-${index + 1}`}
           key={index + ''}
         />

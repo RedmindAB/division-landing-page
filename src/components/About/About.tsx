@@ -30,12 +30,13 @@ const About = () => {
                 ]}
               /> */}
               <Title1 uppercase>
-                By fusing creativity and technical innovation together, we leave
-                'ordinary' behind and create on-brand innovation platforms.
+                We build collaborations by elevating brands reframing values
+                embracing change and having a{' '}
+                <Outlined>positive impact</Outlined> on our planet.
               </Title1>
             </TextContainer>
             <Spacer exact={60} />
-            <TextContainer width="650px">
+            <TextContainer width="700px">
               <Headline1 uppercase>
                 We are a brand-driven group that believes in our ability to
                 generate positive change with lasting value and smart ideas.

@@ -1,15 +1,15 @@
 import * as React from 'react'
-import '../css/index.css'
-import Hero from '../components/Hero'
-import About from '../components/About'
-import Experiences from '../components/Experiences'
-import BrandPlatforms from '../components/BrandPlatforms'
-import BrandInnovations from '../components/BrandInnovations'
-import Footer from '../components/Footer'
-import { Spacer } from '../theme/base'
 import { Helmet } from 'react-helmet'
+import About from '../components/About'
+import BrandInnovations from '../components/BrandInnovations'
+import BrandPlatforms from '../components/BrandPlatforms'
+import Experiences from '../components/Experiences'
+import Footer from '../components/Footer'
+import FullScreenReveal from '../components/FullScreenReveal'
 import Header from '../components/Header/Header'
-import ParticleBackground from '../components/ParticleBackground'
+import Hero from '../components/Hero'
+import '../css/index.css'
+import { Spacer } from '../theme/base'
 
 const IndexPage = () => {
   return (
@@ -22,26 +22,30 @@ const IndexPage = () => {
         <html lang="en" />
       </Helmet>
       <main style={{ position: 'relative' }}>
-        <div
-          style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            zIndex: -100,
-          }}
-        >
-          <ParticleBackground />
-        </div>
         <Hero />
-        <About />
-        <Experiences />
-        <BrandPlatforms />
-        <BrandInnovations />
-        <Experiences />
-        <Spacer exact={100} mobile={40} />
-        <Footer />
+        <div style={{ background: 'var(--background)' }}>
+          <About />
+          <Experiences index={0} />
+          <BrandPlatforms />
+          <BrandInnovations />
+          <Experiences index={1} />
+          <Spacer exact={100} mobile={40} />
+          <Footer />
+        </div>
+        <FullScreenReveal>
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            style={{ height: '100%', width: '100%', objectFit: 'cover' }}
+          >
+            <source
+              src={require('../assets/videos/Footer.mp4')}
+              type="video/mp4"
+            />
+          </video>
+        </FullScreenReveal>
       </main>
     </>
   )

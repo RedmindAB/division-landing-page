@@ -37,7 +37,7 @@ const typographyProps = css<TypographyProps>`
 
 export type TypographyComponent<T = {}> = FunctionComponent<TypographyProps & T>
 
-export const Title1 = styled.h6<TypographyProps>`
+export const Title1 = styled.h1<TypographyProps>`
   ${typographyBase}
   font-family: ${fonts.title.condensedBold};
 
@@ -80,7 +80,7 @@ export const Title2 = styled.h2<TypographyProps>`
 
 export const Headline1 = styled.h1<TypographyProps>`
   ${typographyBase}
-  font-family: ${fonts.headline.condensedLight};
+  font-family: ${fonts.light};
   font-size: 3.6rem;
   letter-spacing: -0.1rem;
   ${typographyProps}
@@ -96,7 +96,7 @@ export const Headline2 = styled.h2<TypographyProps>`
 `
 
 const body1Styles = css`
-  font-family: ${fonts.body.condensedLight};
+  font-family: ${fonts.light};
   font-size: 2.4rem;
   line-height: 2.9rem;
 `
@@ -108,7 +108,7 @@ export const Body1 = styled.p<TypographyProps>`
 `
 
 const body2Styles = css`
-  font-family: ${fonts.body.condensedLight};
+  font-family: ${fonts.light};
   font-size: 1.8rem;
   line-height: 2.2rem;
 `

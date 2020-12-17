@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
 import { breakpoints } from '../../theme/mediaBreakpoints'
 import { Headline2, Title1 } from '../../theme/typography'
 
@@ -54,10 +54,50 @@ export const PicturesContainer = styled.div<{ offset: number }>`
   transform: translateX(-${({ offset }) => offset * 100}vw);
 `
 
+const anim = keyframes`
+  0% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0%;
+  }
+`
+
 export const PictureContainer = styled.div`
   height: 100%;
   width: 100vw;
   background: #444;
+  position: relative;
+
+  /* &::before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    animation: ${anim} 3s infinite alternate;
+
+    background: #ff4;
+
+    mix-blend-mode: difference;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    background: #ff4e15;
+
+    mix-blend-mode: difference;
+  } */
 `
 
 export const NavigationContainer = styled.nav`
