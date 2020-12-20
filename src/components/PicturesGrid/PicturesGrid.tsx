@@ -9,13 +9,27 @@ type Props = {
   pictures: string[]
 }
 
+// APP
+// EVENT MANAGEMENT
+// SET DESIGN
+// VENUE MANAGEMENT
+// HOSTING
+// SUSTAINABILITY GOALS
+// MAIL CAMPAIGN
+
+const strings = [
+  ['EVENT MANAGEMENT', 'APP DEVELOPMENT'],
+  ['SET DESIGN', 'VENUE MANAGEMENT'],
+  ['HOSTING', 'SUSTAINABILITY GOALS', 'MAIL CAMPAIGNS'],
+]
+
 const PicturesGrid: FunctionComponent<Props> = ({ pictures }) => {
   const renderPicture = (src: string, index: number) => (
     <S.Picture url={src} key={index}>
       {/* <Title1 uppercase>event management</Title1> */}
       <TypeWriter
         options={{
-          strings: ['EVENT MANAGEMENT', 'APP DEVELOPMENT'],
+          strings: strings[index],
           autoStart: true,
           loop: true,
           cursorClassName: 'typewriter-cursor',

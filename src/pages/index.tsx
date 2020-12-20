@@ -32,8 +32,18 @@ const IndexPage = () => {
           <Spacer exact={100} mobile={40} />
           <Footer />
         </div>
-        <FullScreenReveal>
-          <video autoPlay muted loop playsInline style={{ objectFit: 'cover' }}>
+        <FullScreenReveal
+          onReveal={() =>
+            (document.getElementById('reveal-video') as HTMLVideoElement).play()
+          }
+        >
+          <video
+            id="reveal-video"
+            muted
+            loop
+            playsInline
+            style={{ objectFit: 'cover' }}
+          >
             <source
               src={require('../assets/videos/Footer.mp4')}
               type="video/mp4"

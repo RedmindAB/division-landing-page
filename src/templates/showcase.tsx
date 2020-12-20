@@ -67,8 +67,7 @@ const Showcase: FunctionComponent<Props> = ({ pageContext: { project } }) => {
         </div>
         <ConceptAbout />
         <Spacer exact={100} mobile={40} />
-        <ConceptPlatform />
-        <ConceptValues />
+        {/* <ConceptPlatform /> */}
         <PicturesGrid
           pictures={[
             require('../assets/images/carousel/carousel-1.jpg'),
@@ -76,11 +75,16 @@ const Showcase: FunctionComponent<Props> = ({ pageContext: { project } }) => {
             require('../assets/images/carousel/carousel-3.jpg'),
           ]}
         />
+        <ConceptValues />
         <Footer />
       </div>
-      <FullScreenReveal>
+      <FullScreenReveal
+        onReveal={() =>
+          (document.getElementById('reveal-video') as HTMLVideoElement).play()
+        }
+      >
         <video
-          autoPlay
+          id="reveal-video"
           muted
           loop
           playsInline

@@ -87,10 +87,7 @@ const carousels = {
 const Experiences: FunctionComponent<Props> = ({ index }) => {
   return (
     <div style={{ position: 'relative' }}>
-      <TitleSection title="brands" id="experiences">
-        <Divider />
-        <Spacer exact={140} />
-      </TitleSection>
+      <Spacer exact={140} />
       <Carousel
         slides={index === 0 ? carousels.one.slides : carousels.two.slides}
       />
