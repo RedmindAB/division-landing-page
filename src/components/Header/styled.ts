@@ -14,6 +14,7 @@ export const Container = styled.nav<{ showBackground: boolean }>`
   right: 0;
   z-index: 1000;
 
+  transition: background 0.2s;
   ${({ showBackground }) => showBackground && 'background: rgba(0, 0, 0, 0.8)'}
 `
 

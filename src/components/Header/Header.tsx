@@ -50,9 +50,30 @@ const homePageRoutes: Route[] = [
 const Header = () => {
   const [showDrawer, setShowDrawer] = useState(false)
   const [animationState, setAnimationState] = useState('hidden')
+  const [isScrolling, setIsScrolling] = useState(false)
   const isMobile = useMediaQuery({
     query: mediaQueries.mobile,
   })
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (!isScrolling && window.scrollY > 0) {
+        setIsScrolling(true)
+      }
+
+      if (isScrolling && window.scrollY === 0) {
+        setIsScrolling(false)
+      }
+    }
+
+    document.addEventListener('scroll', onScroll)
+
+    return () => document.body.removeEventListener('scroll', onScroll)
+  }, [])
+
+  useEffect(() => {
+    document.body.style.overflow = showDrawer ? 'hidden' : 'initial'
+  }, [showDrawer])
 
   const getOnPressFn = (id: string) => () => {
     const scrollToElement = () => {
@@ -72,10 +93,6 @@ const Header = () => {
       setTimeout(scrollToElement, 50)
     }
   }
-
-  useEffect(() => {
-    document.body.style.overflow = showDrawer ? 'hidden' : 'initial'
-  }, [showDrawer])
 
   const toggleDrawer = () => {
     const newState = !showDrawer
@@ -171,7 +188,7 @@ const Header = () => {
           </S.DrawerBackdrop>
         </S.Overlay>
       )}
-      <S.Container showBackground={false}>
+      <S.Container showBackground={isMobile && isScrolling}>
         <LogoSmall />
         {isMobile && (
           <div
