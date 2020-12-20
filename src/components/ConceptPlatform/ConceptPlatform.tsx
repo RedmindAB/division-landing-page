@@ -15,6 +15,12 @@ const ConceptPlatform = () => {
   )
 
   return (
+    <div>
+      {selectedProject.keywords.map(renderKeywords)}
+    </div>
+  )
+
+  return (
     <S.Container id="project-platform">
       <S.SectionTitle>
         <Body1 uppercase>WORK</Body1>

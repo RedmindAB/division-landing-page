@@ -33,7 +33,7 @@ const BrandInnovations = () => {
     <TitleSection
       title="how we innovate"
       id="brand-innovations"
-      style={{ padding: '6rem 3rem' }}
+      style={{ padding: '6rem 3rem', backgroundColor: 'var(--accent)' }}
     >
       <Slide up>
         <div className="title-section-content">

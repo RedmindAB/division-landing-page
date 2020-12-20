@@ -43,17 +43,17 @@ const overlayAnimateOut = css`
   animation: ${fadeIn} 2s reverse;
 `
 
-export const Overlay = styled.div<{ animationState: AnimationState }>`
+export const Overlay = styled.div`
   height: 100vh;
   z-index: 100;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.8);
 `
 
-export const DrawerBackdrop = styled.div<{ animationState: AnimationState }>`
+export const DrawerBackdrop = styled.div`
   background: var(--background);
   padding: 9rem 9rem 6rem 9rem;
   display: grid;
@@ -116,7 +116,7 @@ export const DrawerIcon = styled.div`
 `
 
 const crossOneAnim = css`
-  transform: rotate(-45deg) translate(-14px, 7px);
+  transform: rotate(-45deg) translate(-15px, 8px);
 `
 
 const crossTwoAnim = css`

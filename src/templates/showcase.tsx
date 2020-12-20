@@ -4,6 +4,7 @@ import React, {
   useEffect,
   useState,
 } from 'react'
+import path from 'path'
 import ConceptAbout from '../components/ConceptAbout'
 import ConceptDescription from '../components/ConceptDescription'
 import ConceptPlatform from '../components/ConceptPlatform'
@@ -17,6 +18,7 @@ import { Spacer } from '../theme/base'
 import '../css/index.css'
 import { Helmet } from 'react-helmet'
 import FullScreenReveal from '../components/FullScreenReveal'
+import PicturesGrid from '../components/PicturesGrid'
 
 type Props = {
   pageContext: {
@@ -67,7 +69,13 @@ const Showcase: FunctionComponent<Props> = ({ pageContext: { project } }) => {
         <Spacer exact={100} mobile={40} />
         <ConceptPlatform />
         <ConceptValues />
-        {/* <PicturesGrid pictures={[selectedProject.platformImage]} /> */}
+        <PicturesGrid
+          pictures={[
+            require('../assets/images/carousel/carousel-1.jpg'),
+            require('../assets/images/carousel/carousel-2.jpg'),
+            require('../assets/images/carousel/carousel-3.jpg'),
+          ]}
+        />
         <Footer />
       </div>
       <FullScreenReveal>
