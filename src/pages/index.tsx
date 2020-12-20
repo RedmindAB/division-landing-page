@@ -33,13 +33,7 @@ const IndexPage = () => {
           <Footer />
         </div>
         <FullScreenReveal>
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            style={{ height: '100%', width: '100%', objectFit: 'cover' }}
-          >
+          <video autoPlay muted loop playsInline style={{ objectFit: 'cover' }}>
             <source
               src={require('../assets/videos/Footer.mp4')}
               type="video/mp4"

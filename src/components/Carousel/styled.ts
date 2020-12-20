@@ -12,6 +12,7 @@ export const Container = styled.div`
   height: 900px;
   margin: 2rem 0;
   position: relative;
+  width: 100%;
 
   ${breakpoints.mobile} {
     height: 80vh;

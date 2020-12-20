@@ -86,8 +86,8 @@ const Header = () => {
   return (
     <>
       {showDrawer && (
-        <S.Overlay>
-          <S.DrawerBackdrop>
+        <S.Overlay animationState={animationState}>
+          <S.DrawerBackdrop animationState={animationState}>
             <S.InfoContainer>
               <div>
                 <Body1>START A CONVERSATION</Body1>

@@ -42,7 +42,7 @@ const Carousel: FunctionComponent<Props> = ({ slides, title, year }) => {
     return (
       <S.PictureContainer key={index}>
         <img
-          style={{ height: '100%', width: '100%', backgroundSize: 'cover' }}
+          style={{ height: '100%', width: '100%', objectFit: 'cover' }}
           // imgStyle={{ backgroundSize: 'cover' }}
           src={image}
           // fluid={image}
@@ -89,9 +89,11 @@ const Carousel: FunctionComponent<Props> = ({ slides, title, year }) => {
       <S.BottomContainer>
         <PageDots current={activeIndex + 1} amount={slides.length} />
       </S.BottomContainer>
-      <S.PicturesContainer offset={activeIndex}>
-        {slides.map((slide, index) => renderPicture(slide.picture, index))}
-      </S.PicturesContainer>
+      <div style={{ overflowX: 'hidden', width: '100%', height: '100%' }}>
+        <S.PicturesContainer offset={activeIndex}>
+          {slides.map((slide, index) => renderPicture(slide.picture, index))}
+        </S.PicturesContainer>
+      </div>
       {hasLinks && (
         <S.NavigationContainer>
           <S.PlusContainer className="hide-mobile">

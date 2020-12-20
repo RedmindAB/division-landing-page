@@ -8,10 +8,12 @@ import Carousel from '../Carousel'
 import { graphql, useStaticQuery } from 'gatsby'
 import ParticleBackground from '../ParticleBackground'
 
-const img1_1 = require('../../assets/images/Carousel_1-1.png')
-const img1_2 = require('../../assets/images/Carousel_1-2.png')
-const img1_3 = require('../../assets/images/Carousel_1-3.png')
-const img2_1 = require('../../assets/images/Carousel_2-1.png')
+const img1_1 = require('../../assets/images/carousel/carousel-1.jpg')
+const img1_2 = require('../../assets/images/carousel/carousel-2.jpg')
+const img1_3 = require('../../assets/images/carousel/carousel-3.jpg')
+const img2_1 = require('../../assets/images/carousel/carousel-4.jpg')
+const img2_2 = require('../../assets/images/carousel/carousel-5.jpg')
+const img2_3 = require('../../assets/images/carousel/carousel-6.jpg')
 
 type Props = {
   index: number
@@ -61,7 +63,7 @@ const carousels = {
         },
       },
       {
-        picture: img1_2,
+        picture: img2_2,
         year: '2020',
         title: 'Swedish Olympic Commitee',
         link: {
@@ -70,7 +72,7 @@ const carousels = {
         },
       },
       {
-        picture: img1_3,
+        picture: img2_3,
         year: '2020',
         title: 'Foodstock',
         link: {
