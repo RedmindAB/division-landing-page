@@ -13,6 +13,7 @@ const TitleSection: FunctionComponent<Props> = ({
   children,
   withoutRightPadding,
   background,
+  id,
   ...divProps
 }) => {
   return (
@@ -21,6 +22,7 @@ const TitleSection: FunctionComponent<Props> = ({
       background={background}
       {...divProps}
     >
+      <S.ScrollAnchor id={id} />
       <S.TitleContainer>
         <Body1 uppercase>{title}</Body1>
       </S.TitleContainer>

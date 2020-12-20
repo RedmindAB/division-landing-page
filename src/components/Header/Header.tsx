@@ -96,51 +96,53 @@ const Header = () => {
       {showDrawer && (
         <S.Overlay className={`${animationState}-overlay`}>
           <S.DrawerBackdrop className={`${animationState}-drawer`}>
-            <span className={`${animationState}-content`}>
-              <S.InfoContainer>
-                <div>
-                  <Body1>START A CONVERSATION</Body1>
-                  <Body1>
-                    <Mail
-                      href="mailto:dan.josefsson@division.se"
-                      style={{ textDecoration: 'underline' }}
-                    >
-                      DAN.JOSEFSSON@DIVISION.SE
-                    </Mail>
-                  </Body1>
-                </div>
-                <div />
-                <div>
-                  <Headline2>DISRUPT</Headline2>
-                  <Spacer exact={10} />
-                  <Body1>Let's create tomorrow together.</Body1>
-                  <Spacer exact={10} />
-                  <Body1>
-                    <a
-                      href="https://redmind.se/"
-                      target="_blank"
-                      rel="noopener"
-                      style={{ textDecoration: 'underline' }}
-                    >
-                      dreamers apply here
-                    </a>
-                  </Body1>
-                </div>
-                <div>
-                  <Headline2>STOCKHOLM</Headline2>
-                  <Spacer exact={10} />
-                  <Body1>
-                    STUREGATAN 4, 2 TR
-                    <br />
-                    BOX 55719
-                    <br />
-                    114 35 STOCKHOLM
-                  </Body1>
-                  <Spacer exact={10} />
-                  <Body1>+46 8 791 40 10</Body1>
-                </div>
-              </S.InfoContainer>
-            </span>
+            {!isMobile && (
+              <span className={`${animationState}-content`}>
+                <S.InfoContainer>
+                  <div>
+                    <Body1>START A CONVERSATION</Body1>
+                    <Body1>
+                      <Mail
+                        href="mailto:dan.josefsson@division.se"
+                        style={{ textDecoration: 'underline' }}
+                      >
+                        DAN.JOSEFSSON@DIVISION.SE
+                      </Mail>
+                    </Body1>
+                  </div>
+                  <div />
+                  <div>
+                    <Headline2>DISRUPT</Headline2>
+                    <Spacer exact={10} />
+                    <Body1>Let's create tomorrow together.</Body1>
+                    <Spacer exact={10} />
+                    <Body1>
+                      <a
+                        href="https://redmind.se/"
+                        target="_blank"
+                        rel="noopener"
+                        style={{ textDecoration: 'underline' }}
+                      >
+                        dreamers apply here
+                      </a>
+                    </Body1>
+                  </div>
+                  <div>
+                    <Headline2>STOCKHOLM</Headline2>
+                    <Spacer exact={10} />
+                    <Body1>
+                      STUREGATAN 4, 2 TR
+                      <br />
+                      BOX 55719
+                      <br />
+                      114 35 STOCKHOLM
+                    </Body1>
+                    <Spacer exact={10} />
+                    <Body1>+46 8 791 40 10</Body1>
+                  </div>
+                </S.InfoContainer>
+              </span>
+            )}
             <span className={`${animationState}-content`}>
               <S.DrawerMenu>
                 <span onClick={toggleDrawer}>

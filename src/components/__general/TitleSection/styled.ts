@@ -30,3 +30,8 @@ export const TitleContainer = styled.div`
   padding-top: 3rem;
   max-width: 150px;
 `
+
+export const ScrollAnchor = styled.span`
+  position: absolute;
+  top: -60px;
+`
