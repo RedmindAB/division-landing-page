@@ -45,9 +45,9 @@ export const Title1 = styled.h1<TypographyProps>`
   letter-spacing: 0.4rem;
   line-height: 9rem; */
 
-  font-size: 6vw;
+  font-size: 5vw;
   letter-spacing: 0.1vw;
-  line-height: 5vw;
+  line-height: 4vw;
 
   ${breakpoints.mobile} {
     font-size: 4.5rem;

@@ -56,11 +56,12 @@ export const Overlay = styled.div`
 
 export const DrawerBackdrop = styled.div`
   background: var(--background);
-  padding: 9rem 9rem 6rem 9rem;
+  padding: 9rem 6rem 6rem 6rem;
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-gap: 9rem;
+  grid-gap: 3rem;
   height: 90%;
+  min-height: 800px;
 
   ${breakpoints.mobile} {
     height: 100%;
