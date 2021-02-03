@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import fonts from '../../theme/fonts'
+import { Headline1 } from '../../theme/typography'
 
 export const Container = styled.section`
   height: 100vh;
@@ -37,4 +39,19 @@ export const VideoThumbnail = styled.img`
   left: 0;
   right: 0;
   bottom: 0;
+`
+
+export const LargeLogoContainer = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  user-select: none;
+  text-align: center;
+`
+
+export const LogoSubtitle = styled(Headline1)`
+  font-family: ${fonts.condensedLight};
+  text-transform: uppercase;
+  letter-spacing: 0;
 `
