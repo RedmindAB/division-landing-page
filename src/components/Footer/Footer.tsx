@@ -1,5 +1,6 @@
 import React from 'react'
 import { Spacer } from '../../theme/base'
+import QuestionForm from '../QuestionForm/QuestionForm'
 import Divider from '../__general/Divider'
 import Location from './Location'
 import NavigationContact from './NavigationContact'
@@ -24,6 +25,7 @@ const Footer = () => {
       <Spacer exact={50} />
       <Spacer exact={20} />
       <Social />
+      <QuestionForm />
     </S.Container>
   )
 }

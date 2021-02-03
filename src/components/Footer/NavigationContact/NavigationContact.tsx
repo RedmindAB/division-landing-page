@@ -44,13 +44,13 @@ const NavigationContact = () => {
         <Spacer exact={10} />
         <Link to="/">
           <Anchor as={Body2} onClick={getOnPressFn('#brand-platforms')}>
-            Brand platforms
+            For brands
           </Anchor>
         </Link>
         <Spacer exact={10} />
         <Link to="/">
           <Anchor as={Body2} onClick={getOnPressFn('#brand-innovations')}>
-            Brand innovations
+            Co:lab
           </Anchor>
         </Link>
       </nav>

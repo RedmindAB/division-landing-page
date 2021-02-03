@@ -40,7 +40,7 @@ const Social = () => {
         <Body2>Stureplansgruppen's policies</Body2>
       </div>
       <div>
-        <Body2 accent>DIVISION @{year}</Body2>
+        <Body2 style={{ opacity: 0.4 }}>DIVISION @{year}</Body2>
       </div>
     </Row>
   )

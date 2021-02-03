@@ -107,7 +107,7 @@ export const Body1 = styled.p<TypographyProps>`
   ${typographyProps}
 `
 
-const body2Styles = css`
+export const body2Styles = css`
   font-family: ${fonts.light};
   font-size: 1.8rem;
   line-height: 2.2rem;
