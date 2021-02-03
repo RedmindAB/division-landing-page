@@ -1,10 +1,7 @@
-import { graphql, useStaticQuery } from 'gatsby'
 import React, { useState } from 'react'
-import fonts from '../../theme/fonts'
-import { Headline1 } from '../../theme/typography'
 import LogoLarge from '../../assets/svg/LogoLarge'
-import * as S from './styled'
 import { Spacer } from '../../theme/base'
+import * as S from './styled'
 const HeroVideo = require('../../assets/videos/Hero_1.mp4')
 const HeroImage = require('../../assets/images/Hero_1_thumb.png')
 

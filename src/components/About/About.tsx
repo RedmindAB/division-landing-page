@@ -1,19 +1,20 @@
 import React from 'react'
+import Slide from 'react-reveal/Slide'
 import { Spacer, TextContainer } from '../../theme/base'
 import { Body1, Headline1, Outlined, Title1 } from '../../theme/typography'
+import useDesktopBr from '../hooks/useDesktopBr'
 import TitleSection from '../__general/TitleSection/TitleSection'
-import Slide from 'react-reveal/Slide'
-import ParticleBackground from '../ParticleBackground'
-import ScrollingOutlineTitle from '../ScrollingOutlineTitle/ScrollingOutlineTitle'
 
 type Props = {}
 
 const About = () => {
+  const br = useDesktopBr()
+
   return (
     <div style={{ position: 'relative' }}>
       {/* <ParticleBackground /> */}
       <Spacer exact={100} mobile={40} />
-      <TitleSection title="about us" id="about">
+      <TitleSection title="about" id="about">
         <Slide up>
           <div className="title-section-content">
             <TextContainer width="85%">
@@ -30,15 +31,23 @@ const About = () => {
                 ]}
               /> */}
               <Title1 uppercase>
-                We build collaborations by elevating brands reframing values
-                embracing change and having a{' '}
-                <Outlined>positive impact</Outlined> on our planet.
+                <Outlined>
+                  We build
+                  {br}
+                  collaborations
+                  {br}
+                </Outlined>{' '}
+                by elevating brands
+                {br}
+                and
+                {br}
+                reframing values.
               </Title1>
             </TextContainer>
             <Spacer exact={60} />
             <TextContainer width="700px">
               <Headline1 uppercase>
-                We are a brand-driven group that believes in our ability to
+                We are a brand-driven group and that believes in our ability to
                 generate positive change with lasting value and smart ideas.
               </Headline1>
               <Spacer exact={30} />

@@ -38,11 +38,11 @@ const homePageRoutes: Route[] = [
     id: '#about',
   },
   {
-    title: 'What we do',
+    title: 'For Brands',
     id: '#brand-platforms',
   },
   {
-    title: 'How we Innovate',
+    title: 'Co:lab',
     id: '#brand-innovations',
   },
 ]

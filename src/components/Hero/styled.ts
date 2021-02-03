@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import fonts from '../../theme/fonts'
+import { breakpoints } from '../../theme/mediaBreakpoints'
 import { Headline1 } from '../../theme/typography'
 
 export const Container = styled.section`
@@ -48,6 +49,12 @@ export const LargeLogoContainer = styled.div`
   transform: translate(-50%, -50%);
   user-select: none;
   text-align: center;
+
+  ${breakpoints.mobile} {
+    & svg {
+      width: 80vw;
+    }
+  }
 `
 
 export const LogoSubtitle = styled(Headline1)`

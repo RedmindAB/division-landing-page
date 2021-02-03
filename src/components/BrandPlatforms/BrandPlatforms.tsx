@@ -1,14 +1,12 @@
-import React from 'react'
-import * as S from './styled'
-import Img from 'gatsby-image'
-import TitleSection from '../__general/TitleSection'
-import { Spacer, TextContainer } from '../../theme/base'
-import { Body1, Headline1, Outlined, Title1 } from '../../theme/typography'
 import { graphql, useStaticQuery } from 'gatsby'
-import { mediaQueries } from '../../theme/mediaBreakpoints'
+import React from 'react'
 import { useMediaQuery } from 'react-responsive'
-import ParticleBackground from '../ParticleBackground'
 import Slide from 'react-reveal/Slide'
+import { Spacer, TextContainer } from '../../theme/base'
+import { mediaQueries } from '../../theme/mediaBreakpoints'
+import { Body1, Headline1, Outlined, Title1 } from '../../theme/typography'
+import TitleSection from '../__general/TitleSection'
+import * as S from './styled'
 
 type Props = {}
 
@@ -34,36 +32,31 @@ const BrandPlatforms = () => {
     <div style={{ position: 'relative' }}>
       <Spacer exact={100} mobile={40} />
       {/* <ParticleBackground /> */}
-      <TitleSection title="what we do" id="brand-platforms">
+      <TitleSection title="for brands" id="brand-platforms">
         <Slide up>
           <S.Container>
             <S.TopTextContainer>
               <Title1 uppercase>
-                By fusing creativity{br} and technical{br}innovation{br}
+                FUTURE FIT ACTIONS{br}FOR YOUR{br}ORGANISATION.
               </Title1>
             </S.TopTextContainer>
             <Title1 uppercase>
-              together,{br}
-              we{' '}
-              <Outlined>
-                leave{br}'ordinary'{br} behind
-              </Outlined>
-              and{br}create{br}on-brand{br}innovation{br}programs.
+              we <Outlined>leave 'ordinary' behind</Outlined> and Create
+              On-Brand innovation programs.
             </Title1>
             <S.BodyContainer>
               <Spacer exact={100} mobile={1} />
               <TextContainer width="100%" mobile="100%">
                 <Headline1 uppercase>
-                  We share your challenges and ambitions, we understand what you
-                  need
+                  We help you shift your focus from linear project-based
+                  communication to circular platform-based.
                   <br />
                   <br />
                 </Headline1>
                 <Body1>
-                  For Brands to innovate, stakeholders need more robust tools.
-                  Biometrics, artificial intelligence, the internet of things
-                  (IoT), facial recognition, and machine learning are elements
-                  of this new technology-fueled era.
+                  This maximizes your investment, reduces costs and
+                  environmental impact. It also gathers all your organization’s
+                  assets in one place for greater long-term impact.
                 </Body1>
               </TextContainer>
             </S.BodyContainer>
