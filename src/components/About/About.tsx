@@ -2,7 +2,7 @@ import React from 'react'
 import Slide from 'react-reveal/Slide'
 import { Spacer, TextContainer } from '../../theme/base'
 import { Body1, Headline1, Outlined, Title1 } from '../../theme/typography'
-import useDesktopBr from '../hooks/useDesktopBr'
+import useDesktopBr from '../../hooks/useDesktopBr'
 import TitleSection from '../__general/TitleSection/TitleSection'
 
 type Props = {}

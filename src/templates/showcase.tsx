@@ -19,6 +19,7 @@ import '../css/index.css'
 import { Helmet } from 'react-helmet'
 import FullScreenReveal from '../components/FullScreenReveal'
 import PicturesGrid from '../components/PicturesGrid'
+import useIsMobile from '../hooks/useIsMobile'
 
 type Props = {
   pageContext: {
@@ -35,6 +36,7 @@ export const ShowcaseContext = createContext<{
 })
 
 const Showcase: FunctionComponent<Props> = ({ pageContext: { project } }) => {
+  const isMobile = useIsMobile()
   const [selectedProject, setSelectedProject] = useState(
     projects.find((p) => p.slug === project.slug) || projects[0]
   )
@@ -78,24 +80,26 @@ const Showcase: FunctionComponent<Props> = ({ pageContext: { project } }) => {
         <ConceptValues />
         <Footer />
       </div>
-      <FullScreenReveal
-        onReveal={() =>
-          (document.getElementById('reveal-video') as HTMLVideoElement).play()
-        }
-      >
-        <video
-          id="reveal-video"
-          muted
-          loop
-          playsInline
-          style={{ height: '100%', width: '100%', objectFit: 'cover' }}
+      {!isMobile && (
+        <FullScreenReveal
+          onReveal={() =>
+            (document.getElementById('reveal-video') as HTMLVideoElement).play()
+          }
         >
-          <source
-            src={require('../assets/videos/Footer.mp4')}
-            type="video/mp4"
-          />
-        </video>
-      </FullScreenReveal>
+          <video
+            id="reveal-video"
+            muted
+            loop
+            playsInline
+            style={{ height: '100%', width: '100%', objectFit: 'cover' }}
+          >
+            <source
+              src={require('../assets/videos/Footer.mp4')}
+              type="video/mp4"
+            />
+          </video>
+        </FullScreenReveal>
+      )}
     </ShowcaseContext.Provider>
   )
 }

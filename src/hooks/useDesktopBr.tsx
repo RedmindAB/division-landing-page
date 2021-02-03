@@ -1,6 +1,6 @@
 import React from 'react'
 import { useMediaQuery } from 'react-responsive'
-import { mediaQueries } from '../../theme/mediaBreakpoints'
+import { mediaQueries } from '../theme/mediaBreakpoints'
 
 const useDesktopBr = () => {
   const isMobile = useMediaQuery({
