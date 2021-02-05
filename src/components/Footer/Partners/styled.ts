@@ -1,7 +1,11 @@
 import styled from 'styled-components'
 import { breakpoints } from '../../../theme/mediaBreakpoints'
+import { Row } from '../styled'
 
-export const Container = styled.div``
+export const Container = styled(Row)`
+  grid-template-columns: auto 1fr;
+  grid-gap: 100px;
+`
 
 export const TitleContainer = styled.div`
   width: 200px;
@@ -19,16 +23,23 @@ export const LogosRow = styled.div`
   width: 100%;
 
   & > div {
-    margin: 0 10px 20px 10px;
+    margin: 0 18px 18px 18px;
   }
 
   ${breakpoints.mobile} {
     grid-column: 1;
+    justify-content: center;
   }
 `
 
 export const LogoContainer = styled.div`
-  background: white;
-  height: 100px;
-  width: 100px;
+  min-height: 100px;
+  width: 164px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > img {
+    width: 100%;
+  }
 `

@@ -1,6 +1,8 @@
-import styled, { css, keyframes } from 'styled-components'
+import styled from 'styled-components'
 
-export const Container = styled.div``
+export const Container = styled.div`
+  position: relative;
+`
 
 export const Picture = styled.div<{ url: string }>`
   background-image: url('${(props) => props.url}');
@@ -13,8 +15,26 @@ export const Picture = styled.div<{ url: string }>`
   align-items: center;
 `
 
-const anim = keyframes`
-
+export const Backdrop = styled.div`
+  background: rgba(0, 0, 0, 0.2);
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 `
 
-export const TitleContainer = styled.div``
+export const BackdropContent = styled.div`
+  width: 80%;
+
+  & p {
+    margin-top: 80px;
+    text-align: left;
+  }
+`
+
+export const TitleContainer = styled.div`
+  z-index: 20;
+`

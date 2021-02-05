@@ -1,19 +1,9 @@
 import React, { FunctionComponent } from 'react'
-import TitleSection from '../__general/TitleSection'
-import Divider from '../__general/Divider'
+import { projects } from '../../data/projects'
 import { Spacer } from '../../theme/base'
-import * as S from './styled'
-import { Headline1 } from '../../theme/typography'
 import Carousel from '../Carousel'
-import { graphql, useStaticQuery } from 'gatsby'
-import ParticleBackground from '../ParticleBackground'
 
-const img1_1 = require('../../assets/images/carousel/carousel-1.jpg')
-const img1_2 = require('../../assets/images/carousel/carousel-2.jpg')
-const img1_3 = require('../../assets/images/carousel/carousel-3.jpg')
-const img2_1 = require('../../assets/images/carousel/carousel-4.jpg')
-const img2_2 = require('../../assets/images/carousel/carousel-5.jpg')
-const img2_3 = require('../../assets/images/carousel/carousel-6.jpg')
+const PH = require('../../assets/images/carousel/carousel-3.jpg')
 
 type Props = {
   index: number
@@ -23,7 +13,7 @@ const carousels = {
   one: {
     slides: [
       {
-        picture: img1_1,
+        picture: projects.find((p) => p.slug === 'impact-week').previewImage,
         year: '2019',
         title: 'Impact Week',
         link: {
@@ -32,7 +22,7 @@ const carousels = {
         },
       },
       {
-        picture: img1_2,
+        picture: projects.find((p) => p.slug === 'stockholm-open').previewImage,
         year: '2020',
         title: 'Stockholm Open',
         link: {
@@ -41,7 +31,7 @@ const carousels = {
         },
       },
       {
-        picture: img1_3,
+        picture: PH,
         year: '1739',
         title: 'Childhood',
         link: {
@@ -54,7 +44,7 @@ const carousels = {
   two: {
     slides: [
       {
-        picture: img2_1,
+        picture: PH,
         year: '2019',
         title: 'Division',
         link: {
@@ -63,7 +53,8 @@ const carousels = {
         },
       },
       {
-        picture: img2_2,
+        picture: projects.find((p) => p.slug === 'swedish-olympic-commitee')
+          .previewImage,
         year: '2020',
         title: 'Swedish Olympic Commitee',
         link: {
@@ -72,7 +63,7 @@ const carousels = {
         },
       },
       {
-        picture: img2_3,
+        picture: projects.find((p) => p.slug === 'foodstock').previewImage,
         year: '2020',
         title: 'Foodstock',
         link: {

@@ -13,3 +13,9 @@ export const NavigationContainer = styled.div`
   right: 0;
   justify-content: center;
 `
+
+export const Image = styled.img`
+  height: 100%;
+  width: 100%;
+  position: relative;
+`

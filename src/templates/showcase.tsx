@@ -55,7 +55,7 @@ const Showcase: FunctionComponent<Props> = ({ pageContext: { project } }) => {
       }}
     >
       <Helmet>
-        <title>DIVISION - ${project.conceptName}</title>
+        <title>DIVISION - {project.conceptName}</title>
         <meta name="description" content={project.body} />
         <html lang="en" />
       </Helmet>
@@ -70,13 +70,7 @@ const Showcase: FunctionComponent<Props> = ({ pageContext: { project } }) => {
         <ConceptAbout />
         <Spacer exact={100} mobile={40} />
         {/* <ConceptPlatform /> */}
-        <PicturesGrid
-          pictures={[
-            require('../assets/images/carousel/carousel-1.jpg'),
-            require('../assets/images/carousel/carousel-2.jpg'),
-            require('../assets/images/carousel/carousel-3.jpg'),
-          ]}
-        />
+        <PicturesGrid initiatives={selectedProject.initiatives} />
         <ConceptValues />
         <Footer />
       </div>

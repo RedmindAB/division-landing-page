@@ -5,27 +5,24 @@ import * as S from './styled'
 
 type Props = {
   title: string
+  logos: string[]
 }
 
-const Partners: FunctionComponent<Props> = ({ title }) => {
+const Partners: FunctionComponent<Props> = ({ title, logos }) => {
+  const renderLogo = (src: string, index: number) => {
+    return (
+      <S.LogoContainer key={index}>
+        <img src={src} />
+      </S.LogoContainer>
+    )
+  }
+
   return (
     <S.Container>
-      <Row>
-        <S.TitleContainer>
-          <Body1 uppercase>{title}</Body1>
-        </S.TitleContainer>
-        <S.LogosRow>
-          <S.LogoContainer />
-          <S.LogoContainer />
-          <S.LogoContainer />
-          <S.LogoContainer />
-          <S.LogoContainer />
-          <S.LogoContainer />
-          <S.LogoContainer />
-          <S.LogoContainer />
-          <S.LogoContainer />
-        </S.LogosRow>
-      </Row>
+      <S.TitleContainer>
+        <Body1 uppercase>{title}</Body1>
+      </S.TitleContainer>
+      <S.LogosRow>{logos.map(renderLogo)}</S.LogosRow>
     </S.Container>
   )
 }

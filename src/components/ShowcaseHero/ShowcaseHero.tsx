@@ -11,7 +11,12 @@ const ShowcaseHero: FunctionComponent<Props> = () => {
 
   return (
     <S.Container>
-      <Video src={selectedProject.video} />
+      {selectedProject.heroVideo ? (
+        <Video src={selectedProject.heroVideo} />
+      ) : (
+        <S.Image src={selectedProject.heroImage} />
+      )}
+
       <S.NavigationContainer>
         <ConceptNavigation />
       </S.NavigationContainer>

@@ -4,7 +4,7 @@ import { body2Styles } from '../../../theme/typography'
 export const Container = styled.div.attrs(() => ({
   className: 'material-input-container',
 }))`
-  margin-top: 50px;
+  margin-top: 40px;
   position: relative;
   width: 264px;
 `
