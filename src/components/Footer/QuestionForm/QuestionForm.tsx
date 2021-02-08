@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { Spacer } from '../../../theme/base'
+import axios, { AxiosRequestConfig } from 'axios'
 import { Body1 } from '../../../theme/typography'
 import MaterialInput from '../../__general/MaterialInput'
 import { Row } from '../styled'
@@ -15,7 +16,19 @@ const QuestionForm = () => {
 
   const onSubmit = async (data) => {
     try {
-      console.log(data)
+      const form = document.querySelector<HTMLFormElement>('#contact-form')
+      const formData = new FormData(form)
+      const body = new URLSearchParams(formData as any).toString()
+
+      const opts: AxiosRequestConfig = {
+        url: '/',
+        method: 'post',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        data: body,
+      }
+
+      await axios(opts)
+
       reset()
       setSubmitted(true)
     } catch (error) {
@@ -24,9 +37,15 @@ const QuestionForm = () => {
   }
 
   return (
-    <S.Container onSubmit={handleSubmit(onSubmit)} name="contact" netlify>
+    <S.Container
+      name="contact"
+      netlify
+      id="contact-form"
+      onSubmit={handleSubmit(onSubmit)}
+    >
       <S.QuestionFormRow>
         <Body1 uppercase>Say hello!</Body1>
+        <input type="hidden" name="form-name" value="contact" />
         <S.FormGrid>
           <MaterialInput
             label="Name"
