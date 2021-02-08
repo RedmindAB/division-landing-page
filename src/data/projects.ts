@@ -29,7 +29,7 @@ export const projects: Project[] = [
     heroImage: require('../assets/stockholm-open/hero.png'),
     previewImage: require('../assets/stockholm-open/preview.png'),
     slug: 'stockholm-open',
-    date: '2020-05-06',
+    date: 'October 2021-2023',
     conceptDescription:
       'A unifying platform for tennis, sustainability and business.',
     heading: 'Building the future of Swedish Tennis.',
@@ -97,7 +97,7 @@ export const projects: Project[] = [
     heroImage: require('../assets/impact-week/hero.png'),
     previewImage: require('../assets/impact-week/preview.png'),
     slug: 'impact-week',
-    date: '2020-05-06',
+    date: 'August 2021',
     conceptDescription:
       'A summit to celebrate Impact entrepreneurs and encourage more people to follow their path.',
     heading:
@@ -157,87 +157,87 @@ export const projects: Project[] = [
       },
     ],
   },
-  {
-    conceptName: 'Childhood',
-    slug: 'childhood',
-    date: '2020-05-06',
-    conceptDescription:
-      'High level description of the project and dont make it too long',
-    heading: 'Showcase the ideas, the amibition, maybe include the location',
-    body:
-      'Elaborate on the partnership and the tools that will be used, maybe discuss what the partner really wanted to achieve, what was driving the project, discuss what venues wasn’t taken, ultimately wrap it up with an explanation what was selected and why',
-    values: [
-      {
-        title: 'Get offensive',
-        body:
-          'Explain how we help our partner put their revenue streams at risk with new digital offerings that reshuffle activities and business models',
-      },
-      {
-        title: 'Digitize',
-        body:
-          'Example of how we can helped partner to overinvest in digital technology relative to competition',
-      },
-      {
-        title: 'Reframe',
-        body:
-          'How we helped our client to use a wider lens to assess would-be competitors or partners',
-      },
-      {
-        title: 'Reshape demand',
-        body:
-          'A concrete example of how the Division enriched products and services with information, social content, and connectivity',
-      },
-      {
-        title: 'Overhaul',
-        body:
-          'How division helped client Rethink and rebuild legacy IT systems and cultural and strategic constraints',
-      },
-    ],
-  },
-  {
-    conceptName: 'Division',
-    slug: 'division',
-    date: '2020-05-06',
-    conceptDescription:
-      'High level description of the project and dont make it too long',
-    heading: 'Showcase the ideas, the amibition, maybe include the location',
-    body:
-      'Elaborate on the partnership and the tools that will be used, maybe discuss what the partner really wanted to achieve, what was driving the project, discuss what venues wasn’t taken, ultimately wrap it up with an explanation what was selected and why',
-    values: [
-      {
-        title: 'Get offensive',
-        body:
-          'Explain how we help our partner put their revenue streams at risk with new digital offerings that reshuffle activities and business models',
-      },
-      {
-        title: 'Digitize',
-        body:
-          'Example of how we can helped partner to overinvest in digital technology relative to competition',
-      },
-      {
-        title: 'Reframe',
-        body:
-          'How we helped our client to use a wider lens to assess would-be competitors or partners',
-      },
-      {
-        title: 'Reshape demand',
-        body:
-          'A concrete example of how the Division enriched products and services with information, social content, and connectivity',
-      },
-      {
-        title: 'Overhaul',
-        body:
-          'How division helped client Rethink and rebuild legacy IT systems and cultural and strategic constraints',
-      },
-    ],
-  },
+  // {
+  //   conceptName: 'Childhood',
+  //   slug: 'childhood',
+  //   date: '2020-05-06',
+  //   conceptDescription:
+  //     'High level description of the project and dont make it too long',
+  //   heading: 'Showcase the ideas, the amibition, maybe include the location',
+  //   body:
+  //     'Elaborate on the partnership and the tools that will be used, maybe discuss what the partner really wanted to achieve, what was driving the project, discuss what venues wasn’t taken, ultimately wrap it up with an explanation what was selected and why',
+  //   values: [
+  //     {
+  //       title: 'Get offensive',
+  //       body:
+  //         'Explain how we help our partner put their revenue streams at risk with new digital offerings that reshuffle activities and business models',
+  //     },
+  //     {
+  //       title: 'Digitize',
+  //       body:
+  //         'Example of how we can helped partner to overinvest in digital technology relative to competition',
+  //     },
+  //     {
+  //       title: 'Reframe',
+  //       body:
+  //         'How we helped our client to use a wider lens to assess would-be competitors or partners',
+  //     },
+  //     {
+  //       title: 'Reshape demand',
+  //       body:
+  //         'A concrete example of how the Division enriched products and services with information, social content, and connectivity',
+  //     },
+  //     {
+  //       title: 'Overhaul',
+  //       body:
+  //         'How division helped client Rethink and rebuild legacy IT systems and cultural and strategic constraints',
+  //     },
+  //   ],
+  // },
+  // {
+  //   conceptName: 'Division',
+  //   slug: 'division',
+  //   date: '2020-05-06',
+  //   conceptDescription:
+  //     'High level description of the project and dont make it too long',
+  //   heading: 'Showcase the ideas, the amibition, maybe include the location',
+  //   body:
+  //     'Elaborate on the partnership and the tools that will be used, maybe discuss what the partner really wanted to achieve, what was driving the project, discuss what venues wasn’t taken, ultimately wrap it up with an explanation what was selected and why',
+  //   values: [
+  //     {
+  //       title: 'Get offensive',
+  //       body:
+  //         'Explain how we help our partner put their revenue streams at risk with new digital offerings that reshuffle activities and business models',
+  //     },
+  //     {
+  //       title: 'Digitize',
+  //       body:
+  //         'Example of how we can helped partner to overinvest in digital technology relative to competition',
+  //     },
+  //     {
+  //       title: 'Reframe',
+  //       body:
+  //         'How we helped our client to use a wider lens to assess would-be competitors or partners',
+  //     },
+  //     {
+  //       title: 'Reshape demand',
+  //       body:
+  //         'A concrete example of how the Division enriched products and services with information, social content, and connectivity',
+  //     },
+  //     {
+  //       title: 'Overhaul',
+  //       body:
+  //         'How division helped client Rethink and rebuild legacy IT systems and cultural and strategic constraints',
+  //     },
+  //   ],
+  // },
   {
     conceptName: 'Swedish Olympic Committe',
     previewImage: require('../assets/sok/preview.png'),
     heroImage: require('../assets/sok/preview.png'),
     heroVideo: require('../assets/sok/hero.mp4'),
     slug: 'swedish-olympic-commitee',
-    date: '2020-05-06',
+    date: '2020 & 2021',
     conceptDescription:
       'Strenghten SOC communication, activations and highlight the values and goals of the Swedish Olympic Committee',
     heading:
@@ -307,7 +307,7 @@ export const projects: Project[] = [
     heroImage: require('../assets/foodstock/hero.png'),
     previewImage: require('../assets/foodstock/hero.png'),
     slug: 'foodstock',
-    date: '2020-05-06',
+    date: 'Ongoing',
     conceptDescription: 'Scandinavian gastronomy and food craftsmanship',
     heading:
       'Inspiring and educational gastronomy experiences which focus on the core produce and craftsmanship behind a dish.',

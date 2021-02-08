@@ -11,26 +11,31 @@ const disabledButton = css`
 `
 
 export const Container = styled.form`
-  .question-input {
-    grid-column: 2 / -1;
-  }
-
-  .question-input .material-input-container {
-    width: calc(264px * 2);
-  }
-
   ${breakpoints.mobile} {
-    .question-input {
-      grid-column: initial;
-    }
-
-    .material-input-container {
-      width: 100% !important;
-    }
-
     button {
       width: 100%;
     }
+  }
+`
+
+export const FormGrid = styled.div`
+  display: grid;
+  grid-column: 2 / -1;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 80px;
+
+  .question-input {
+    grid-column: 1 / -1;
+  }
+
+  .material-input-container {
+    width: 100%;
+  }
+
+  ${breakpoints.mobile} {
+    grid-column: initial;
+    grid-template-columns: 1fr;
+    grid-column-gap: 0;
   }
 `
 

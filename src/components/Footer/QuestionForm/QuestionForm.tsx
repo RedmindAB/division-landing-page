@@ -27,31 +27,33 @@ const QuestionForm = () => {
     <S.Container onSubmit={handleSubmit(onSubmit)}>
       <S.QuestionFormRow>
         <Body1 uppercase>Say hello!</Body1>
-        <MaterialInput
-          label="Name"
-          name="name"
-          ref={register({
-            required: true,
-          })}
-        />
-        <MaterialInput
-          label="E-mail"
-          type="email"
-          name="email"
-          ref={register({
-            required: true,
-          })}
-        />
-        <div />
-        <span className="question-input">
+        <S.FormGrid>
           <MaterialInput
-            label="Question"
-            name="question"
+            label="Name"
+            name="name"
             ref={register({
               required: true,
             })}
           />
-        </span>
+          <MaterialInput
+            label="E-mail"
+            type="email"
+            name="email"
+            ref={register({
+              required: true,
+            })}
+          />
+          <div />
+          <span className="question-input">
+            <MaterialInput
+              label="Question"
+              name="question"
+              ref={register({
+                required: true,
+              })}
+            />
+          </span>
+        </S.FormGrid>
       </S.QuestionFormRow>
       <Spacer h32 />
       <Row>

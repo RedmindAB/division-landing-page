@@ -4,22 +4,20 @@ import React, {
   useEffect,
   useState,
 } from 'react'
-import path from 'path'
+import { Helmet } from 'react-helmet'
 import ConceptAbout from '../components/ConceptAbout'
 import ConceptDescription from '../components/ConceptDescription'
-import ConceptPlatform from '../components/ConceptPlatform'
 import ConceptValues from '../components/ConceptValues'
 import Footer from '../components/Footer'
+import FullScreenReveal from '../components/FullScreenReveal'
 import Header from '../components/Header'
+import PicturesGrid from '../components/PicturesGrid'
 import ShowcaseHero from '../components/ShowcaseHero'
 import Divider from '../components/__general/Divider'
-import { Project, projects } from '../data/projects'
-import { Spacer } from '../theme/base'
 import '../css/index.css'
-import { Helmet } from 'react-helmet'
-import FullScreenReveal from '../components/FullScreenReveal'
-import PicturesGrid from '../components/PicturesGrid'
+import { Project, projects } from '../data/projects'
 import useIsMobile from '../hooks/useIsMobile'
+import { Spacer } from '../theme/base'
 
 type Props = {
   pageContext: {
