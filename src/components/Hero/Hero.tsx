@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import LogoLarge from '../../assets/svg/LogoLarge'
 import { Spacer } from '../../theme/base'
 import * as S from './styled'
+
 const HeroVideo = require('../../assets/videos/Hero_1.mp4')
 const HeroImage = require('../../assets/images/Hero_1_thumb.png')
 
