@@ -18,4 +18,5 @@ export const Image = styled.img`
   height: 100%;
   width: 100%;
   position: relative;
+  object-fit: cover;
 `
