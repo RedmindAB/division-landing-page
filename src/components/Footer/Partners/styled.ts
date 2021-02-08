@@ -5,6 +5,10 @@ import { Row } from '../styled'
 export const Container = styled(Row)`
   grid-template-columns: auto 1fr;
   grid-gap: 100px;
+
+  ${breakpoints.mobile} {
+    grid-template-columns: 1fr;
+  }
 `
 
 export const TitleContainer = styled.div`
@@ -41,5 +45,9 @@ export const LogoContainer = styled.div`
 
   & > img {
     width: 100%;
+  }
+
+  ${breakpoints.mobile} {
+    width: 100px;
   }
 `

@@ -42,11 +42,11 @@ const Footer = () => {
       <Spacer exact={20} />
       <Partners title="co:lab partners" logos={coLabLogos} />
       <Spacer exact={50} />
-      <Divider />
-      <Spacer exact={20} />
+      {/* <Divider /> */}
+      {/* <Spacer exact={20} />
       <Partners title="in partnership with" logos={[]} />
-      <Spacer exact={50} />
-      <Spacer exact={200} />
+      <Spacer exact={50} /> */}
+      <Spacer exact={200} mobile={100} />
       <NavigationContact />
       <Spacer exact={50} />
       <Divider />
