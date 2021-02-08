@@ -24,7 +24,7 @@ const QuestionForm = () => {
   }
 
   return (
-    <S.Container onSubmit={handleSubmit(onSubmit)}>
+    <S.Container onSubmit={handleSubmit(onSubmit)} name="contact" netlify>
       <S.QuestionFormRow>
         <Body1 uppercase>Say hello!</Body1>
         <S.FormGrid>

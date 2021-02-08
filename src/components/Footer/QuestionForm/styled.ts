@@ -10,7 +10,7 @@ const disabledButton = css`
   cursor: initial;
 `
 
-export const Container = styled.form`
+export const Container = styled.form<{ netlify?: boolean }>`
   ${breakpoints.mobile} {
     button {
       width: 100%;
